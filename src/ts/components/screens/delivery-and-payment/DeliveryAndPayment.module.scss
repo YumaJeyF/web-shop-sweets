@@ -1,0 +1,17 @@
+@use '../../../../scss/styles' as *;
+@use '../../../../scss/vars' as *;
+
+.sec_top {
+    background-color: #efebeb;
+    padding-bottom: 64px;
+
+    @media (max-width: 470px) {
+        padding-bottom: $big;
+    }
+
+    .two_sec {
+        max-width: 1170px;
+        margin: auto;
+        padding: 0 $mnormal;
+    }
+}

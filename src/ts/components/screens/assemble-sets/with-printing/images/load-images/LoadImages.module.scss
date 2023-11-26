@@ -1,0 +1,53 @@
+@use '../../../../../../../scss/vars' as *;
+@use '../../../../../../../scss/extends' as *;
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(3, minmax($vmiddle, $s-eight));
+    row-gap: $min;
+    column-gap: $tr;
+
+    @media (max-width: 530px) {
+        display: flex;
+        align-items: center;
+        gap: $low;
+    }
+
+    @media (max-width: 320px) {
+        gap: $min;
+    }
+
+    .image {
+        position: relative;
+        width: 65px;
+        height: 65px;
+
+        @media (max-width: 320px) {
+            width: 55px;
+            height: 55px;
+        }
+    
+        .pic {
+            max-width: $s-eight;
+            max-height: $s-eight;
+            @extend %images-custom;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+    
+        .icon_close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            max-width: $middle;
+            max-height: $middle;
+    
+            &:hover {
+                svg {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@use '../../../../../scss/styles' as *;
+@use '../../../../../scss/extends' as *;
+@use '../../../../../scss/vars' as *;
+
+.sec_middle {
+    display: grid;
+    grid-template-columns: repeat(1, minmax($oh, $wblock) minmax($vmiddle, 256px));
+    gap: 152px;
+    margin: 104px 0 92px 0;
+
+    @media (max-width: 906px) {
+        gap: $so;
+    }
+
+    @media (max-width: 730px) {
+        gap: $over-middle;
+    }
+
+    @media (max-width: 630px) {
+        grid-template-columns: repeat(1, minmax($oh, $wblock));
+        margin: $so 0;
+    }
+
+    .pic {
+        position: relative;
+        max-width: 256px;
+
+        @media (max-width: 630px) {
+            margin: auto;
+            grid-row: 1;
+            max-width: 180px;
+        }
+
+        @media (max-width: 340px) {
+            max-width: 138px;
+        }
+
+        .image {
+            width: 100%;
+        }
+    }
+}

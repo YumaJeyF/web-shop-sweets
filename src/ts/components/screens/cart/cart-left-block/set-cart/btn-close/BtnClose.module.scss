@@ -1,0 +1,30 @@
+@use '../../../../../../../scss/extends' as *;
+@use '../../../../../../../scss/vars' as *;
+
+.btn_close {
+    @extend %btn-reset;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+    width: $mnormal;
+    height: $mnormal;
+    cursor: pointer;
+
+    @media not all and (hover: none) {
+        &:hover {
+            .svg_path {
+                fill-opacity: 0.5;
+            }
+        }
+    }
+
+    @media (max-width: 320px) {
+        width: $over-mini;
+        height: $over-mini;
+    }
+
+    .svg_close {
+        @extend %max;
+    }
+}

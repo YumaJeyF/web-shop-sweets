@@ -1,0 +1,62 @@
+@use '../../../../../../scss/styles' as *;
+@use '../../../../../../scss/vars' as *;
+@use '../../../../../../scss/mixins' as *;
+
+.dates_block {
+    @media (max-width: 764px) {
+        &:nth-child(6),
+        &:nth-child(5) {
+            display: none;
+        }
+    }
+
+    @media (max-width: 554px) {
+        &:nth-child(4) {
+            display: none;
+        }
+    }
+
+    @media (max-width: 478px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 54px;
+    }
+
+    @media (max-width: 267px) {
+        gap: $vmiddle;
+    }
+
+    .text {
+        font-weight: $fbw;
+        text-align: center;
+
+        @media (max-width: 478px) {
+            font-size: $over-mini;
+            max-width: 100px;
+        }
+    }
+
+    .icon {
+        @extend %over-flex;
+        margin-bottom: $micro;
+        position: relative;
+
+        .pic_hat {
+            @include pos(absolute, 0);
+            top: -54px;
+            left: 65px;
+
+            @media (max-width: 1120px) {
+                left: 82px;
+            }
+
+            @media (max-width: 880px) {
+                left: 70px;
+            }
+            @media (max-width: 478px) {
+                left: 50%;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@use '../../../../../../scss/vars' as *;
+
+.card {
+    max-width: $care-inf;
+    .pic {
+        max-width: $care-inf;
+        height: $care-inf;
+
+        @media (max-width: 540px) {
+            max-width: 200px;
+            height: 200px;
+        }
+
+        @media (max-width: 424px) {
+            max-width: 235px;
+            height: 235px;
+        }
+    }
+
+    .name {
+        margin: 29px 0 $ver-mini 0;
+
+        @media (max-width: 600px) {
+            margin: $middle 0 $low 0;
+        }
+
+    }
+
+    .text {
+        color: $gr;
+    }
+}

@@ -1,0 +1,122 @@
+@use '../../../../../../scss/vars' as *;
+@use '../../../../../../scss/mixins' as *;
+
+.select-images {
+    max-width: $care-inf;
+
+    @media (max-width: 470px) {
+        max-width: 200px;
+    }
+    
+    .select {
+        &__control {
+            cursor: pointer;
+            border-radius: $three;
+            border: 1px solid $border-card;
+            box-shadow: none;
+
+            &--menu-is-open {
+                .select__indicator {
+                    transform: rotate(180deg);
+                }
+            }
+
+            &--is-focused {
+                border: 1px solid $border-card;
+            }
+
+            &:hover {
+                border-color: $border-card;
+            }
+        }
+
+        &__input-container {
+            padding: 0;
+        }
+
+        &__placeholder {
+            font-size: $mnormal;
+            padding: 0;
+            color: $light-gr;
+            margin: 0;
+
+            @media (max-width: 470px) {
+                font-size: $mini;
+            }
+        }
+        
+        &__indicator-separator {
+            display: none;
+        }
+
+        &__indicator {
+            padding: 0;
+            width: $mnormal;
+            // padding-right: $normal;
+
+            path {
+                fill: $gr;
+            }
+        }
+
+        &__indicators {
+            padding-right: $ten;
+            gap: $micro;
+        }
+
+        &__value-container {
+            padding: 0 $normal;
+        }
+
+        &__menu {
+            margin-top: 0;
+            box-shadow: none;
+            border: 1px solid $border-card;
+            border-radius: 0;
+
+            div {
+                @include scrollbar($blue-back, $very_light, $micro, $micro);
+            }
+        }
+
+        &__option {
+            cursor: pointer;
+            font-size: $mnormal;
+            color: $light-gr;
+            background-color: $wh;
+
+            @media (max-width: 470px) {
+                font-size: $mini;
+            }
+
+            &:hover {
+                background-color: $very_light;
+            }
+
+            &--is-focused {
+                background-color: $very_light;
+            }
+
+        }
+
+        &__multi-value {
+            background-color: $very_light;
+            border-radius: 1px solid $gr;
+
+            &__remove {
+                &:hover {
+                    cursor: pointer;
+                    background: none;
+
+                    path {
+                        fill: $gr;
+                    }
+                }
+
+                    path {
+                        fill: $gr;
+                    }
+            }
+        }
+    }
+}

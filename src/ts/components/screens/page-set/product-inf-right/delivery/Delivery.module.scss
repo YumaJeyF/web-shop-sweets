@@ -1,0 +1,33 @@
+@use '../../../../../../scss/extends' as *;
+@use '../../../../../../scss/styles' as *;
+@use '../../../../../../scss/vars' as *;
+
+.delivery {
+    
+    .block {
+        @extend %flex;
+        gap: 27px;
+        
+        &:not(:last-child) {
+            margin-bottom: $vmiddle;
+        }
+
+        @media (max-width: 690px) {
+            gap: 17px;
+
+            &:not(:last-child) {
+                margin-bottom: $middle;
+
+                @media (max-width: 400px) {
+                    margin-bottom: $tr;
+                }
+            }
+        }
+    }
+
+    .text {
+        @media (max-width: 355px) {
+            font-size: $over-mini;
+        }
+    }
+}

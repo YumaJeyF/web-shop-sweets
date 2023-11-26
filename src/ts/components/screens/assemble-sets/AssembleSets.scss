@@ -1,0 +1,169 @@
+@use '../../../../scss/vars' as *;
+@use '../../../../scss/extends' as *;
+
+.title {
+    margin-bottom: $vb_big;
+
+    @media (max-width: 768px) {
+        margin-bottom: $vmiddle;
+    }
+
+    @media (max-width: 400px) {
+        margin-bottom: $ten;
+    }
+}
+
+.assemble-sec {
+    margin-bottom: 50px;
+
+    @media (max-width: 400px) {
+        margin-bottom: $b-over;
+    }
+}
+
+.assemble-catalog {
+    display: grid;
+    grid-template-columns: repeat(3, minmax($oh, $care-inf));
+    gap: $big;
+
+    @media (max-width: 1100px) {
+        gap: $min;
+    }
+
+    @media (max-width: 992px) {
+        grid-template-columns: repeat(2, minmax($oh, $care-inf));
+    }
+}
+
+.catalog-general {
+    @media (max-width: 470px) {
+        gap: $low !important;
+    }
+
+    @media (max-width: 360px) {
+        grid-template-columns: repeat(1, minmax($oh, 230px)) !important;
+    }
+}
+
+.inf-right {
+    @extend %card-border;
+    background-color: $wh;
+    max-width: $care-inf;
+    min-width: $care-inf;
+
+    @media (max-width: 800px) {
+        max-width: 240px;
+        min-width: 240px;
+    }
+
+    @media (max-width: 730px) {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        max-width: none;
+        min-width: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: $mini;
+        border: 0;
+        box-shadow: 0px 0px 20px 0px #00000040;
+        padding: $tr $mnormal $ten $mnormal;
+        box-sizing: border-box;
+    }
+
+    .btn {
+        &_close {
+            position: static;
+            width: $ten;
+            height: $ten;
+        }
+    
+        &_path {
+            fill: $gr;
+            opacity: 0.3;
+        }
+    }
+    
+    .count {
+        padding: $tw-s 45px $tw-one 45px;
+    
+        @media (max-width: 800px) {
+            padding-left: $big !important;
+            padding-right: $big !important;
+        }
+
+        @media (max-width: 730px) {
+            padding: 0 !important;
+            margin-bottom: 3px !important;
+        }
+    }
+    
+    .middle {
+        padding: $min $vmiddle;
+        border-top: 1px solid $border-card;
+        border-bottom: 1px solid $border-card;
+    
+        @media (max-width: 730px) {
+            padding: 0;
+            border: 0;
+        }
+    
+        &_empty {
+            padding: 0;
+            border-bottom: 0;
+        }
+    }
+    
+    .bottom {
+        padding: $mini $over 28px $over;
+    
+        @media (max-width: 730px) {
+            padding: 0;
+        }
+        
+        .btn {
+            width: 100%;
+            max-height: $so;
+            padding: $mini;
+        }
+    }
+    
+    .text {
+        margin-bottom: $mnormal;
+    
+        @media (max-width: 730px) {
+            margin-bottom: 0;    
+        }
+
+        @media (max-width: 400px) {
+            font-size: $over-mini;
+        }
+    }
+}
+
+.two_sec {
+    @extend %over-flex;
+    align-items: start;
+    gap: $th-tw;
+
+    @media (max-width: 1100px) {
+        gap: $min;
+    }
+}
+
+.inf-card {
+    @extend %over-flex;
+    gap: $vminmiddle;
+
+    &:not(:last-child) {
+        margin-bottom: $over-mini;
+    }
+
+    .name {
+        font-weight: $fbw;
+        margin-right: auto;
+    }
+}

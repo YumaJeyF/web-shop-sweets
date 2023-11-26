@@ -1,0 +1,36 @@
+@use '../../../../scss/vars' as *;
+
+.head_block {
+    display: grid;
+    grid-template-columns: repeat(1, minmax($oh, 440px) minmax($oh, $bl-inf));
+    gap: 57px;
+
+    @media (max-width: 992px) {
+        gap: $vmiddle;
+    }
+}
+
+.pic_desktop {
+    max-width: 440px;
+
+}
+
+.pic_mobile {
+    max-width: 350px;
+}
+
+.right_block {
+    margin-top: $e-six;
+
+    @media (max-width: 840px) {
+        margin-top: $f-th;
+    }
+}
+
+.a_sec {
+    margin: 81px 0 69px 0;
+ 
+    @media (max-width: 400px) {
+        margin: $v-big 0 $so 0;
+    }
+}

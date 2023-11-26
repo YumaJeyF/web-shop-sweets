@@ -1,0 +1,64 @@
+@use '../../../../../scss/styles' as *;
+@use '../../../../../scss/vars' as *;
+
+.sec_contacts {
+    display: grid;
+    grid-template-columns: repeat(1, minmax($so, 293px) minmax($so, $wblock));
+    gap: 176px;
+    margin: 45px 0 82px 0;
+
+    @media (max-width: 936px) {
+        gap: $oh;
+    }
+
+    @media (max-width: 778px) {
+        gap: $so;
+        grid-template-columns: repeat(1, minmax($so, 220px) minmax($so, $wblock));
+    }
+
+    @media (max-width: 620px) {
+        grid-template-columns: repeat(1, minmax($so, 180px) minmax($so, $wblock));
+    }
+
+    @media (max-width: 500px) {
+        grid-template-columns: repeat(1, minmax($so, $wblock));
+        margin: 33px 0 53px 0;
+    }
+
+    .pic {
+        position: relative;
+
+        @media (max-width: 500px) {
+            max-width: 160px;
+            margin: auto;
+            grid-row: 2;
+        }
+
+        @media (max-width: 380px) {
+            max-width: 130px;
+        }
+
+        .image {
+            width: 100%;
+        }
+    }
+
+    .title {
+        margin-bottom: $big;
+        font-weight: $fbw;
+        font-size: 42px;
+
+        @media (max-width: 778px) {
+            font-size: $big;
+        }
+
+        @media (max-width: 500px) {
+            text-align: center;
+        }
+
+        @media (max-width: 400px) {
+            margin-bottom: $over;
+            font-size: $over;
+        }
+    }
+}

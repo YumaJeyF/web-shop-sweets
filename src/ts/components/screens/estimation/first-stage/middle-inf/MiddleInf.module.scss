@@ -1,0 +1,59 @@
+@use '../../../../../../scss/vars' as *;
+@use '../../../../../../scss/extends' as *;
+
+.middle {
+    @extend %flex;
+    margin: $mbtitle 0 $tw-three 0;
+    gap: $vmiddle;
+
+    @media (max-width: 470px) {
+        margin: $big 0 $vmiddle 0;
+        display: block;
+    }
+
+    .inf_text {
+        font-weight: $fbw;
+        max-width: 310px;
+
+        @media (max-width: 470px) {
+            margin-bottom: $vminmiddle;
+        }
+
+        @media (max-width: 400px) {
+            font-size: $mini;
+        }
+    }
+
+    .director {
+        margin-left: auto;
+        @extend %flex;
+        gap: $b-low;
+        flex-shrink: 0;
+
+        @media (max-width: 470px) {
+            justify-content: end;
+        }
+
+        .left {
+            .name {
+                font-weight: $fbw;
+                text-align: right;
+            }
+
+            .post {
+                text-align: right;
+            }
+        }
+
+        .pic {
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+
+            .image {
+                @extend %max;
+                object-fit: contain;
+            }
+        }
+    }
+}

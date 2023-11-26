@@ -1,0 +1,61 @@
+@use '../../../../../scss/vars' as *;
+@use '../../../../../scss/extends' as *;
+
+.form {
+    max-width: 572px;
+    margin: auto;
+    margin-bottom: 68px;
+    position: relative;
+
+    @media (max-width: 470px) {
+        margin-bottom: $so;
+    }
+
+    .text {
+        margin-bottom: $big;
+        text-align: center;
+
+        @media (max-width: 470px) {
+            font-size: $mini;
+            margin-bottom: $big;
+        }
+    }
+
+    .problems {
+
+    }
+
+    .bottom {
+        margin-bottom: $tw-three;
+
+        @media (max-width: 470px) {
+            margin-bottom: $normal;
+        }
+
+        &_inf {
+            @extend %flex;
+            gap: $mini;
+
+            @media (max-width: 400px) {
+                display: block;
+            }
+
+            div {
+                width: 100%;
+            }
+        }
+
+        .btn {
+            min-width: 225px;
+
+            @media (max-width: 520px) {
+                height: $so;
+                min-width: 190px;
+            }
+
+            @media (max-width: 400px) {
+                margin: $vmiddle auto 0 auto;
+            }
+        }
+    }
+}

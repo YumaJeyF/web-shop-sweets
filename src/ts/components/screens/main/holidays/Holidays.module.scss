@@ -1,0 +1,74 @@
+@use '../../../../../scss/extends' as *;
+@use '../../../../../scss/styles' as *;
+@use '../../../../../scss/mixins' as *;
+@use '../../../../../scss/vars' as *;
+
+.holidays {
+    .title_holidays {
+        margin: 93px 0 46px;
+
+        @media (max-width: 478px) {
+            margin-top: 61px;
+        }
+    }
+
+    .dates {
+        @extend %flex;
+        gap: 100px;
+
+        @media (max-width: 1120px) {
+            gap: $big;
+        }
+
+        @media (max-width: 980px) {
+            gap: $min;
+        }
+
+        @media (max-width: 478px) {
+            display: block;
+            max-width: 217px;
+            margin: auto;
+        }
+
+    }
+
+    .main_inf {
+        position: relative;
+
+        @media (max-width: 478px) {
+            max-width: 217px;
+            margin: auto;
+        }
+
+        @media (max-width: 267px) {
+            max-width: 180px;
+        }
+
+    }
+
+    .line {
+        @include pos(absolute, -1);
+        width: 90%;
+        border-top: 2px dashed $dashed;
+        top: 34%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @media (max-width:  764px) {
+            width: 80%;
+        }
+
+        @media (max-width:  554px) {
+            width: 76%;
+        }
+
+        @media (max-width: 478px) {
+            width: auto;
+            height: 50%;
+            top: 57%;
+            border-top: 0;
+            border-right: 2px dashed $dashed;
+            left: 42px;
+        }
+    }
+}

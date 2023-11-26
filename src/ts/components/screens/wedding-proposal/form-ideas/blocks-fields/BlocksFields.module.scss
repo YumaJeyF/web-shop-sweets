@@ -1,0 +1,40 @@
+@use '../../../../../../scss/vars' as *;
+
+.blocks_fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax($oh, $care-inf));
+    column-gap: $big;
+    row-gap: $mnormal;
+
+    @media (max-width: 690px) {
+        gap: $mnormal;
+    }
+
+    @media (max-width: 400px) {
+        display: block;
+    }
+
+    .block {
+        &:last-child {
+            grid-column: 1 / -1;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: $mnormal;
+        }
+
+        .name_field {
+            display: block;
+            margin-bottom: $low;
+
+            @media (max-width: 400px) {
+                margin-bottom: 6px;
+            }
+        }
+
+        .textarea {
+            resize: none;
+            min-height: 60px;
+        }
+    }
+}

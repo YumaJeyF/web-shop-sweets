@@ -1,0 +1,58 @@
+@use '../../../../../scss/vars' as *;
+@use '../../../../../scss/extends' as *;
+
+.sec {
+    margin: 83px 0 113px 0;
+
+    @media (max-width: 400px) {
+        margin: 43px 0 47px 0;
+    }
+
+    .title {
+        margin-bottom: 51px;
+
+        @media (max-width: 400px) {
+            margin-bottom: $th-tw;
+        }
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(4, minmax($so, $care-inf));
+        column-gap: $big;
+        row-gap: 54px;
+
+        @media (max-width: 630px) {
+            grid-template-columns: repeat(2, minmax($so, $care-inf));
+        }
+
+        @media (max-width: 470px) {
+            gap: $big;
+        }
+
+        @media (max-width: 340px) {
+            gap: $vmiddle;
+        }
+
+        .card {
+            max-width: $care-inf;
+
+            .pic {
+                @extend %over-flex;
+
+                .icon {
+                    @media (max-width: 470px) {
+                        max-width: 68px;
+                        max-height: 68px;
+                    }
+                }
+            }
+    
+            .text {
+                text-align: center;
+                font-weight: $fbw;
+                margin-top: $tr;
+            }
+        }
+    }
+}

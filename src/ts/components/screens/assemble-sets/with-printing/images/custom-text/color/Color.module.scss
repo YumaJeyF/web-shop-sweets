@@ -1,0 +1,18 @@
+@use '../../../../../../../../scss/vars' as *;
+@use '../../../../../../../../scss/extends' as *;
+
+.color_block {
+    border-radius: 100%;
+    width: $vmiddle;
+    height: $vmiddle;
+    @extend %over-flex;
+    cursor: pointer;
+
+    .icon {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@use '../../../../../scss/extends' as *;
+@use '../../../../../scss/vars' as *;
+@use '../../../../../scss/mixins' as *;
+
+.stocks {
+    .stocks_title {
+        margin: 94px 0 50px 0;
+
+        @media (max-width: 768px) {
+            margin: 50px 0 $vmiddle 0;
+        }
+
+        @media (max-width: 320px) {
+            margin: 38px 0 $normal 0;
+        }
+    }
+}

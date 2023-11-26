@@ -1,0 +1,11 @@
+@use '../../../../../../../scss/vars' as *;
+
+.sec {
+    .bottom {
+        .btn {
+            @media (max-width: 730px) {
+                padding: $tr $vmiddle;
+            }
+        }
+    }
+}

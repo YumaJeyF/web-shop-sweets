@@ -1,0 +1,21 @@
+@use '../../../../../scss/vars' as *;
+
+.sec {
+    margin-top: 58px;
+
+    @media (max-width: 400px) {
+        margin-top: $f-th;
+    }
+
+    .title {
+        margin-bottom: 52px;
+        
+        @media (max-width: 768px) {
+            margin-bottom: $big;
+        }
+
+        @media (max-width: 400px) {
+            margin-bottom: $mnormal;
+        }
+    }
+}

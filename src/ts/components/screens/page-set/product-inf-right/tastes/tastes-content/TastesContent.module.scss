@@ -1,0 +1,24 @@
+@use '../../../../../../../scss/vars' as *;
+@use '../../../../../../../scss/styles' as *;
+
+.tastes_inf {
+    display: flex;
+    align-items: end;
+    line-height: $ten;
+    margin-bottom: $min;
+
+    .name {
+        flex-shrink: 0;
+        max-width: 220px;
+    }
+
+    .line {
+        border-bottom: 1px dashed $border-card;
+        width: 100%;
+    }
+
+    .count {
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+}

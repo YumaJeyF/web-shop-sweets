@@ -1,0 +1,50 @@
+@use '../../../scss/vars' as *;
+@use '../../../scss/extends' as *;
+
+.footer {
+    background-color: $wheate;
+    padding: 60px $vmiddle;
+    @extend %over-flex;
+    align-items: flex-start;
+    gap: $big;
+
+    @media (max-width: 1212px) {
+        gap: $vmiddle;
+    }
+    
+    @media (max-width: 992px) {
+        gap: $micro;
+    }
+
+    @media (max-width: 866px) {
+        display: grid;
+        padding: 33px $mnormal $mini $mnormal;
+    }
+
+    .block {
+        @media (max-width: 866px) {
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+                display: none;
+            }
+        }
+
+        .title_middle {
+            margin-bottom: $middle;
+            font-weight: $fbw;
+            line-height: 19.49px;
+        }
+
+        .text_block {
+            margin-bottom: $over-mini;
+            text-decoration: none;
+        }
+
+        .desktop_company_inf {
+            @media (max-width: 866px) {
+                display: none;
+            }
+        }
+    }
+}

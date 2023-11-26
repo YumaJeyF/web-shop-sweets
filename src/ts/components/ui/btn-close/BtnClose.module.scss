@@ -1,0 +1,15 @@
+@use '../../../../scss/vars' as *;
+@use '../../../../scss/extends' as *;
+
+.btn_close {
+    width: $mnormal;
+    height: $mnormal;
+    @extend %btn-reset;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    @extend %over-flex;
+    align-items: center;
+    cursor: pointer;
+    right: -31px;
+}

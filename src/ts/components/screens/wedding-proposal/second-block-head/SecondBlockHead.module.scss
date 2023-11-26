@@ -1,0 +1,9 @@
+@use '../../../../../scss/vars' as *;
+
+.btns {
+    margin: 34px 0 $over-m 0;
+
+    @media (max-width: 768px) {
+        margin: $over 0 $big 0;
+    }
+}

@@ -1,0 +1,38 @@
+@use '../../../../../../../../scss/vars' as *;
+
+.sec {
+    .result {
+        padding: $middle $sixty-six;
+        border-top: 1px solid $border-card;
+        border-bottom: 1px solid $border-card;
+    
+        @media (max-width: 630px) {
+            padding: $min $big;
+        }
+    
+        @media (max-width: 440px) {
+            padding: $ten $vmiddle;
+        }
+    
+    }
+    
+    .bottom {
+        margin: $b-over $fifty $b-big $fifty;
+    
+        @media (max-width: 630px) {
+            margin: $min $big $big $big;
+        }
+    
+        @media (max-width: 440px) {
+            margin: $ten $vmiddle $vmiddle $vmiddle;
+        }
+    
+        .btn {
+            width: 100%;
+    
+            @media (max-width: 520px) {
+                padding: $mini;
+            }
+        }
+    }
+}

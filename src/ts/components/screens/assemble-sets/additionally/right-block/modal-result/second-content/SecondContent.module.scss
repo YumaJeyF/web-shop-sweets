@@ -1,0 +1,68 @@
+@use '../../../../../../../../scss/vars' as  *;
+@use '../../../../../../../../scss/extends' as  *;
+
+.sec {
+    padding: 48px 46px $tw-s 46px; 
+
+    @media (max-width: 5765px) {
+        padding: $big;
+        padding-bottom: $vmiddle;
+    }
+
+    @media (max-width: 450px) {
+        padding: $vmiddle;
+    }
+
+    .title {
+        margin-bottom: $tw-s;
+
+        @media (max-width: 576px) {
+            margin-bottom: $mnormal;
+        }
+    }
+
+    .text {
+        text-align: center;
+        margin-bottom: $vminmiddle;
+
+        @media (max-width: 400px) {
+            font-size: $mini;
+            margin-bottom: $mini;
+        }
+    }
+
+    .btns {
+        display: grid;
+        grid-template-columns: repeat(2, minmax($so, 100%));
+        grid-template-rows: repeat(1, minmax($vmiddle, $fifty));
+        gap: $ten;
+
+        @media (max-width: 400px) {
+            grid-template-rows: repeat(1, minmax($vmiddle, $so));
+        }
+
+        @media (max-width: 330px) {
+            grid-template-columns: repeat(1, minmax($so, 100%));
+        }
+
+        .link {
+            display: block;
+            text-decoration: none;
+            @extend %max;
+        }
+
+        .btn {
+            padding: $mnormal;
+            @extend %max;
+
+            @media (max-width: 400px) {
+                padding: $over-mini $ten;
+            }
+        }
+        
+        &_left {
+            @extend %over-flex;
+            color: $blue;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@use '../../../../scss/vars' as *;
+
+.sec {
+    .title {
+        margin-bottom: 33px;
+        
+        @media (max-width: 540px) {
+            margin-bottom: $vmiddle;
+        }
+    }
+
+    .questions {
+        display: grid;
+        grid-template-columns: repeat(3, minmax($oh, $card));
+        align-items: start;
+        gap: $big;
+
+        @media (max-width: 992px) {
+            gap: $min;
+        }
+
+        @media (max-width: 768px) {
+            gap: $ten;
+        } 
+
+        @media (max-width: 730px) {
+            display: block;
+            background-color: $wh;
+            border: 1px solid $border-card;
+            border-radius: $micro;
+        }
+    }
+}

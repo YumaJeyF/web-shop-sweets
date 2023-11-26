@@ -1,0 +1,39 @@
+@use '../../../../../../../../../scss/vars' as *;
+
+.top {
+    margin: $fifty $sixty-six $big $sixty-six;
+    
+    @media (max-width: 630px) {
+        margin: $big;
+    }
+
+    @media (max-width: 440px) {
+        margin: $vmiddle;
+    }
+
+    .title {
+        margin-bottom: $tw-six;
+    }
+
+    .name {
+        margin-bottom: $b-low;
+    }
+    
+    .tastes {
+        margin: $b-low 0;
+
+        .taste {
+            &:not(:last-child) {
+                margin-bottom: $ten;
+            }
+        }
+    }
+
+    .additionally {
+        .text {
+            &:not(:last-child) {
+                margin-bottom: $over-mini;
+            }
+        }
+    }
+}

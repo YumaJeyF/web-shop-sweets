@@ -1,0 +1,79 @@
+@use '../../../../../../scss/vars' as *;
+@use '../../../../../../scss/extends' as *;
+
+.inf_shop {
+
+    .name {
+        font-size: $over-middle;
+        line-height: 26.82px;
+        font-weight: $fbw;
+        text-align: center;
+        margin-bottom: 3px;
+        
+        @media (max-width: 355px) {
+            font-size: $middle;
+            line-height: 21.94px;    
+        }
+    }
+    
+    .since_text {
+        font-weight: $fbw;
+        @extend %over-flex;
+        gap: 8px;
+        margin-bottom: $over;
+    
+        @media (max-width: 868px) {
+            margin-bottom: $mini;
+        }
+    
+        @media (max-width: 722px) {
+            margin-bottom: 40px;
+        }
+    
+        @media (max-width: 355px) {
+            font-size: $mini;
+            line-height: 17.07px;
+        }
+    
+        &::before {
+            @extend %line-since;
+        }
+    
+        &::after {
+            @extend %line-since;
+        }
+    }
+    
+    .text_inf {
+        max-width: 499px;
+        margin: auto;
+        text-align: center;
+    
+        @media (max-width: 868px) {
+            font-size: $normal;
+        }
+        @media (max-width: 722px) {
+            margin-bottom: $mini;
+        }
+        @media (max-width: 355px) {
+            font-size: $mini;
+            line-height: 17.05px;
+        }
+    }
+    
+    .title {
+        line-height: 51.2px;
+        font-weight: $fbw;
+        margin-bottom: $tr;
+        text-align: center;
+    
+        @media (max-width: 868px) {
+            font-size: 34px;
+        }
+    
+        @media (max-width: 355px) {
+            line-height: 29.26px;
+            font-size: $over;
+        }
+    }
+}

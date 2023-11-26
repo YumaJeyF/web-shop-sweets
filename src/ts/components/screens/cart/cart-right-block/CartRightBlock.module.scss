@@ -1,0 +1,48 @@
+@use '../../../../../scss/vars' as *;
+@use '../../../../../scss/extends' as *;
+@use '../../../../../scss/styles' as *;
+@use '../../../../../scss/mixins' as *;
+
+.load_block {
+    background-color: $wh;
+    @extend %over-flex;
+}
+
+.sec_right {
+    @media (max-width: 930px) {
+        display: none;
+    }
+    
+    .content {
+        @extend %card-border;
+        background-color: $wh;
+        padding: $big 0;
+    }
+
+    .title {
+        margin: 0 $ten $ten $big;
+    }
+
+    .result_price {
+        @extend %flex;
+        padding: $mnormal $big;
+        border-top: 1px solid $border-card;
+        border-bottom: 1px solid $border-card;
+    }
+
+    .price {
+        margin-left: auto;
+    }
+
+    .btn_arrange {
+        padding: $normal 60px;
+        margin: auto;
+        color: $wh;
+        
+        @media not all and (hover: none) {
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}

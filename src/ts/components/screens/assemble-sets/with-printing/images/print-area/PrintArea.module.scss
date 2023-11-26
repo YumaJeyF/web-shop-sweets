@@ -1,0 +1,20 @@
+@use '../../../../../../../scss/vars' as *;
+
+.content {
+    padding: $over-middle;
+    padding-top: 33px;
+
+    .title {
+        margin-bottom: $tw-s;
+
+        @media (max-width: 470px) {
+            margin-bottom: $min;
+        }
+    }
+    
+    .block {
+        display: grid;
+        grid-template-columns: minmax($oh, 237px);
+        max-width: 283px;
+    }
+}

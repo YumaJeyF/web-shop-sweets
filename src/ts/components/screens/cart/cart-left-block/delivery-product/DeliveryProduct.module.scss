@@ -1,0 +1,269 @@
+@use '../../../../../../scss/styles' as *;
+@use '../../../../../../scss/vars' as *;
+@use '../../../../../../scss/extends' as *;
+@use '../../../../../../scss/mixins' as *;
+
+.delivery_sec {
+    margin-top: $so;
+
+    .del_title {
+        margin-bottom: $seven;
+    }
+
+    .short_inf {
+        text-align: center;
+        margin-bottom: $b-big;
+
+        @media (max-width: 570px) {
+            margin-bottom: $min;
+            font-size: $mini;
+        }
+    }
+
+    .bl_md_d {
+        height: 78px;
+
+        @media (max-width: 520px) {
+            height: auto;
+        }
+    }
+
+    .form {
+        position: relative;
+        
+        &_flex {
+            display: flex;
+            gap: $mini;
+            align-items: start;
+
+            @media (max-width: 520px) {
+                display: block;
+            }
+        }
+
+        .title_bottom {
+            margin-bottom: $b-low;
+
+            @media (max-width: 520px) {
+                margin-bottom: $six;
+            }
+        }
+
+        .selectors {
+            @media (max-width: 520px) {
+                margin-bottom: $normal;
+            }
+        }
+
+        .comment {
+            @media(max-width: 520px) {
+                margin-bottom: 23px;
+            }
+        }
+
+        &_block {
+            margin-bottom: $over;
+
+            @media (max-width: 800px) {
+                margin-bottom: $tr;
+            }
+
+            .name_field {
+                margin-bottom: $six;
+            }
+
+            .inp_block {
+                width: 100%;
+
+                @media (max-width: 520px) {
+                    margin-bottom: $tr;
+                }
+            }
+
+            .block_mt {
+                @extend %flex;
+                gap: $mini;
+                padding: $vmiddle;
+                background-color: $wh;
+                @extend %card-border;
+                width: 100%;
+                cursor: pointer;
+                box-sizing: border-box;
+                height: 100%;
+
+                @media (max-width: 520px) {
+                    height: 68px;
+                    padding: $normal $mini;
+
+                    &:nth-child(1) {
+                        margin-bottom: $low;
+                    }
+                }
+
+                &:hover {
+                    background-color: $cl-scrb;
+                }
+
+                &_active {
+                    border: 1px solid $red;
+                }
+            }
+        }
+
+        .title_mt_pay {
+            margin-bottom: 21px;
+
+            @media (max-width: 520px) {
+                display: none;
+            }
+        }
+
+        .methods {
+            @extend %flex;
+            gap: 42px;
+
+            @media (max-width: 640px) {
+                gap: $vmiddle;
+            }
+
+            @media (max-width: 600px) {
+                display: block;
+            }
+
+            .method {
+                @extend %flex;
+                flex-shrink: 0;
+
+                @media (max-width: 600px) {
+                    padding: $min 0;
+                    padding-left: $seven;
+                    border-top: 1px solid $border-card;
+                    border-bottom: 1px solid $border-card;
+                }
+
+            }
+        }
+
+        .block_methods {
+            margin-bottom: $b-over;
+
+            @media (max-width: 800px) {
+                margin-bottom: $tr;
+            }
+
+            @media (max-width: 520px) {
+                margin-bottom: $min;
+            }
+        }
+
+        .result {
+            display: flex;
+            align-items: end;
+            padding: $vmiddle 0;
+            border-top: 1px solid $border-card;
+            border-bottom: 1px solid $border-card;
+            gap: $ten;
+
+            @media (max-width: 520px) {
+                padding: 0;
+                border: 0;
+            }
+
+            &_price {
+                flex-shrink: 0;
+                margin-left: auto;
+            }
+        }
+
+        .delivery_method {
+            margin-bottom: $normal;
+        }
+        
+        .btn {
+            padding: $normal 65px;
+            margin: $big auto $middle auto;
+
+            @media (max-width: 800px) {
+                margin: 21px auto 21px auto;
+            }
+
+            @media (max-width: 520px) {
+                font-size: $over-mini;
+                padding: $tr $over-m;
+            }
+        }
+
+    }
+}
+
+
+// For textfield
+
+.check {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    &:checked+label::before {
+        border-color: $red;
+        background-color: $red;
+        background-image: url('../../../../../../img/ch-mark.svg');
+    }
+
+    &:not(:disabled):not(:checked)+label:hover::before {
+        border-color: #F08080;
+    }
+
+    &:not(:disabled):active+label::before {
+        background-color: #F08080;
+        border-color: #F08080;
+    }
+
+    &:focus+label::before {
+        box-shadow: 0 0 0 0.1rem #e2aaaa;
+    }
+}
+
+.check+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    font-weight: $fbw;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        width: $middle;
+        height: $middle;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 1px solid $bord-check;
+        margin-right: $over-mini;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+    }
+
+    @media (max-width: 800px) {
+        font-size: $mini;
+    }
+}
+
+.textarea {
+    padding: $over-mini $mini;
+    resize: none;
+    max-height: 500px;
+
+    @media (max-width: 520px) {
+        padding: $ver-mini;
+    }
+}
+
+.area_first {
+    min-height: 76px;
+}
+
+.area_second {
+    min-height: 108px;
+}

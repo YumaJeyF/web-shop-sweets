@@ -1,0 +1,33 @@
+@use '../../../../../../scss/vars' as *;
+@use '../../../../../../scss/extends' as *;
+@use '../../../../../../scss/mixins' as *;
+
+
+.card {
+    @extend %card-border;
+    background-color: $wh; 
+    padding: $vmiddle;
+    padding-left: $over-middle;
+
+    @media (max-width: 576px) {
+        padding: $normal $tr;
+    }
+    
+    div {
+        max-height: $middle
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 4px;
+    }
+
+    .check {
+        @include checkbox(0, $mnormal, $middle);
+    }
+
+    label {
+        font-weight: $fbw;
+        margin-bottom: 0;
+        cursor: pointer;
+    }
+}

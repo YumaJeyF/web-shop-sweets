@@ -1,0 +1,11 @@
+@use '../../../../scss/vars' as *;
+@use '../../../../scss/mixins' as *;
+@use '../../../../scss/extends' as *;
+@use '../../../../scss/vars' as *;
+
+.loading {
+    @include pos(fixed, 1000);
+    @extend %max;
+    @extend %over-flex;
+    background-color: $wh;
+}

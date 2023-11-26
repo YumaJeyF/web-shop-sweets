@@ -1,0 +1,73 @@
+@use '../../../../../../scss/vars' as *;
+
+.sec {
+    .title {
+        margin-bottom: $b-low;
+    }
+
+    .text {
+        text-align: center;
+        max-width: 288px;
+        margin: auto;
+        line-height: $over-middle;
+        margin-bottom: $big;
+
+        @media (max-width: 470px) {
+            margin-bottom: $min;
+        }
+
+        @media (max-width: 400px) {
+            font-size: $mini;
+            line-height: 14.62px;
+        }
+    }
+
+    .two_sec {
+        @media (max-width: 530px) {
+            display: block;
+        }
+    }
+}
+
+.content {
+    background-color: $wh;
+    border-radius: $micro;
+    border: 1px solid $border-card;
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax($oh, 570px);
+    justify-items: center;
+    margin: $so;
+    margin-block: auto;
+    padding-left: $vmiddle;
+    padding-right: $vmiddle;
+
+    @media (max-width: 470px) {
+        margin: $vmiddle;
+    }
+
+    @media (max-width: 320px) {
+        margin: $min;
+    }
+}
+
+.btn {
+    padding: $mnormal;
+    width: 100% !important;
+    margin-top: $vminmiddle !important;
+
+    @media (max-width: 470px) {
+        margin-top: $mini !important;
+        padding: $over-mini !important;
+        font-size: $over-mini !important;
+    }
+}
+
+.btn_close {
+    @media (max-width: 470px) {
+        right: 0;
+        top: -$big;
+        width: $mini;
+        height: $mini;
+    }
+}

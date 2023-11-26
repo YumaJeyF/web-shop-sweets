@@ -1,0 +1,104 @@
+
+@use '../../../../../../scss/styles' as *;
+@use '../../../../../../scss/extends' as *;
+@use '../../../../../../scss/vars' as *;
+
+.head_link {
+    background: no-repeat local center;
+    width: 100%;
+    border-radius: $micro;
+    overflow: hidden;
+    grid-column: 1 / -1;
+    @extend %flex;
+    justify-content: end;
+
+    .text {
+        max-width: $wblock;
+        margin: $normal 0 42px 0;
+        text-align: center;
+
+        @media (max-width: 778px) {
+            margin: $mini 0;
+        }
+
+        @media (max-width: 576px) {
+            font-size: $mini;
+        }
+
+        @media (max-width: 440px) {
+            margin-top: $micro;
+        }
+    }
+
+    .btns {
+        @extend %over-flex;
+        gap: $b-low;
+
+        @media (max-width: 440px) {
+            display: block;
+        }
+
+        .link {
+            text-decoration: none;
+        }
+
+        .btn {
+            padding: 0;
+            width: 230px;
+            height: 50px;
+            @extend %over-flex;
+
+            @media not all and (hover: none) {
+                &:hover {
+                    opacity: 0.95;
+                }
+            }
+
+            @media (max-width: 778px) {
+                max-width: 150px;
+                max-height: 45px;
+            }
+
+            @media (max-width: 576px) {
+                font-size: $mini;
+            }
+
+            @media (max-width: 440px) {
+                width: 100%;
+                max-width: none;
+                max-height: 36px;
+            }
+        }
+
+        .btn_c_sets {
+            @media (max-width: 440px) {
+                margin-bottom: $micro;
+            }
+        }
+    }
+
+    .head_content {
+        max-width: $wblock;
+        margin-right: $oh;
+
+        @media (max-width: 930px) {
+            margin-right: $vmiddle;
+        }
+
+        @media (max-width: 778px) {
+            max-width: 350px;
+        }
+
+        @media (max-width: 576px) {
+            max-width: 310px;
+        }
+
+        @media (max-width: 440px) {
+            max-width: 220px;
+        }
+
+        @media (max-width: 370px) {
+            max-width: 175px;
+        }
+    }
+}

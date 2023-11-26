@@ -1,0 +1,11 @@
+@use '../../../../../../scss/vars' as *;
+
+.textarea {
+    resize: none;
+    min-height: 126px;
+    margin-bottom: $big;
+
+    @media (max-width: 470px) {
+        margin-bottom: $middle;
+    }
+}

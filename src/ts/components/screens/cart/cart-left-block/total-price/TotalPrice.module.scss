@@ -1,0 +1,28 @@
+@use '../../../../../../scss/styles' as *;
+@use '../../../../../../scss/extends' as *;
+@use '../../../../../../scss/vars' as *;
+
+.total_price {
+    @extend %over-flex;
+    padding: $middle 23px $over-middle $tw-six;
+    gap: $ten;
+    
+    .text {
+        @media (max-width: 420px) {
+            font-size: $over-mini;
+        }
+    }
+
+    .right_block {
+        margin-left: auto;
+        flex-shrink: 0;
+
+        .price_with_discounts {
+            margin-bottom: 2px;
+
+            @media (max-width: 570px) {
+                font-size: $mnormal;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@use '../../../../scss/extends' as *;
+@use '../../../../scss/styles' as *;
+@use '../../../../scss/mixins' as *;
+@use '../../../../scss/vars' as *;
+
+.loading {
+    @include pos(absolute, 2);
+    @extend %max !optional;
+    transition: all .5s ease;
+    visibility: hidden;
+    opacity: 0;
+
+    &_active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &_text {
+        text-align: center;
+
+        @media (max-width: 500px) {
+            font-size: $mini;
+        }
+    }
+
+    &_inf {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &_img {
+        width: 350px;
+        display: flex;
+        margin: auto;
+        transition: all .5s ease;
+        
+
+        @media (max-width: 500px) {
+            width: 250px;
+        }
+
+        @media (max-width: 258px) {
+            width: $oh;
+        }
+    }
+}

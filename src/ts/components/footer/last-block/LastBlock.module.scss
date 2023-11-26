@@ -1,0 +1,65 @@
+@use '../../../../scss/extends' as *;
+@use '../../../../scss/vars' as *;
+
+.mob_inf {
+    @media (max-width: 866px) {
+        display: flex;
+        gap: $big;
+    }
+
+    @media (max-width: 425px) {
+        gap: $b-low;
+    }
+
+    @media (max-width: 264px) {
+        display: block;
+    }
+
+    .title {
+        margin-bottom: $micro;
+        font-weight: $fbw;
+        line-height: 21.94px;
+        min-width: 153.31px;
+
+        @media (max-width: 355px) {
+            font-size: $over-mini;
+            line-height: 14.63px;
+            min-width: 102.31px;
+        }
+    }
+
+    .inf_time {
+        @media (max-width: 355px) {
+            font-size: $over-mini;
+        }
+    }
+}
+
+.soc {
+    margin-top: 70px;
+    @extend %flex;
+    gap: $normalFz;
+
+    @media (max-width: 866px) {
+        margin-top: $big;
+        justify-content: center;
+    }
+
+    .soc_icon {
+        @media (max-width: 355px) {
+            width: 34px;
+        }
+    }
+}
+
+.mobile_company_inf {
+    display: none;
+    
+    @media (max-width: 866px) {
+        display: block;
+    }
+
+    @media (max-width: 264px) {
+        margin-bottom: $mini;
+    }
+}

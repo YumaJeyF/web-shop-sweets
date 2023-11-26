@@ -1,0 +1,14 @@
+@use '../../../../scss/vars' as *;
+
+.title {
+    margin: 62px 0 $middle 0;
+    text-align: center;
+
+    @media (max-width: 576px) {
+        margin-top: 44px;
+    }
+
+    @media (max-width: 470px) {
+        margin: 44px 0 $ten 0;
+    }
+}

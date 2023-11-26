@@ -1,0 +1,42 @@
+@use '../../../../../scss/extends' as *;
+@use '../../../../../scss/vars' as *;
+@use '../../../../../scss/styles' as *;
+
+.care_sec {
+    margin-bottom: 72px;
+
+    .title {
+        margin: 85px 0 40px 0;
+
+        @media (max-width: 424px) {
+            margin: 50px 0 $middle;
+        }
+    }
+
+    .container_inf {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        column-gap: $big;
+
+        @media (max-width: 992px) {
+            row-gap: $min;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(100px, $care-inf));
+        }
+
+        @media (max-width: 600px) {
+            column-gap: $ten;
+            row-gap: $mnormal;   
+        }
+
+        @media (max-width: 540px) {
+            grid-template-columns: repeat(2, minmax(100px, 200px));
+
+        }
+
+        @media (max-width: 424px) {
+            grid-template-columns: repeat(1, minmax(100px, 235px));
+        }
+    }
+}

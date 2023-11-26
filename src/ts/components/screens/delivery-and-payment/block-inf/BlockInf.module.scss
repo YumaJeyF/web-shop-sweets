@@ -1,0 +1,12 @@
+@use '../../../../../scss/styles' as *;
+@use '../../../../../scss/vars' as *;
+
+.block_inf {
+    &:not(:last-child) {
+        margin-bottom: $so;
+    }
+
+    .link {
+        margin-left: 4px;
+    }
+}

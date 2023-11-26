@@ -1,0 +1,57 @@
+@use '../../../../../../scss/vars' as *;
+
+.sec {
+    @media (max-width: 730px) {
+        gap: $big;
+    }
+
+    @media (max-width: 400px) {
+        gap: $mini;
+    }
+
+    @media (max-width: 310px) {
+        display: block;
+    }
+
+    .inf {
+         @media (max-width: 730px) {
+            &:not(:last-child) {
+                margin-bottom: $three;
+             }
+        }
+    }
+
+    .title {
+        padding-left: 34px;
+        padding-right: 34px;
+
+        @media (max-width: 730px) {
+            font-size: $mini;
+            margin-bottom: $three;
+        }
+    }
+
+    .btn {
+        @media (max-width: 730px) {
+            padding-top: $mini;
+            padding-bottom: $mini;
+        }
+
+        @media (max-width: 530px) {
+            padding: $mini $so;
+        }
+
+        @media (max-width: 440px) {
+            padding: $mini $big;
+        }
+
+        @media (max-width: 400px) {
+            padding: $mini $vmiddle;
+        }
+
+        @media (max-width: 310px) {
+            margin-top: $ten;
+            width: 100%;
+        }
+    }
+}

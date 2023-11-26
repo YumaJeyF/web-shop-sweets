@@ -1,0 +1,19 @@
+@use '../../../../../../../scss/styles' as *;
+@use '../../../../../../../scss/vars' as *;
+@use '../../../../../../../scss/extends' as *;
+
+.discount_inf {
+    @extend %flex;
+    margin-top: $ten;
+    gap: $ten;
+    
+    .name_stock {
+        font-weight: $fbw;
+    }
+
+    .discount {
+        margin-left: auto;
+        font-weight: $fbw;
+        flex-shrink: 0;
+    }
+}

@@ -1,0 +1,28 @@
+@use '../../../../../scss/vars' as *;
+@use '../../../../../scss/mixins' as *;
+@use '../../../../../scss/extends' as *;
+
+.block {
+    @media (max-width: 670px) {
+        margin-top: $v-big;
+    }
+
+    @media (max-width: 470px) {
+        margin-top: $vmiddle;
+    }
+}
+
+.btn {
+    @include btn-secondary($normal 34px);
+    margin: $th-tw auto 0 auto;
+
+    @media (max-width: 920px) {
+        font-size: $mini;
+        margin-top: $tr;
+        padding: $mini;
+    }
+
+    @media (max-width: 470px) {
+        font-size: $over-mini;
+    }
+}

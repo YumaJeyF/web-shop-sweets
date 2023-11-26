@@ -1,0 +1,31 @@
+@use '../../../../../scss/styles' as *;
+@use '../../../../../scss/vars' as *;
+
+.load {
+    margin-top: $vmiddle;
+
+    @media (max-width: 400px) {
+        margin-top: $ten;
+    }
+}
+
+.empty_cart {
+    margin: 50px 0;
+
+    @media (max-width: 400px) {
+        margin: $big 0;
+    }
+
+    .title {
+        font-weight: $fwd;
+    }
+    
+    .text {
+        text-align: center;
+        margin: $min 0;
+
+        @media (max-width: 400px) {
+            font-size: $mini;
+        }
+    }
+}

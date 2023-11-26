@@ -1,0 +1,14 @@
+@use '../../../../../scss/vars' as *;
+@use '../../../../../scss/styles' as *;
+
+.sec_like {
+    margin-top: 60px;
+
+    @media (max-width: 768px) {
+        margin-top: $b-big;
+    }
+
+    @media (max-width: 400px) {
+        margin-top: 27px;
+    }
+}

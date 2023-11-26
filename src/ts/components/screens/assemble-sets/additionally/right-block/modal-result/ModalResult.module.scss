@@ -1,0 +1,46 @@
+@use '../../../../../../../scss/vars' as *;
+@use '../../../../../../../scss/extends' as *;
+
+.content {
+    background-color: $wh;
+    @extend %card-border;
+    display: grid;
+    grid-template-columns: minmax($oh, 570px);
+    position: relative;
+    margin: $so;
+
+    @media (max-width: 560px) {
+        margin: $big;
+    }
+
+    @media (max-width: 520px) {
+        margin: $mnormal;
+    }
+
+    @media (max-width: 380px) {
+        margin: $low;
+    }
+
+    .btn {
+        &_close {
+            right: -31px;
+
+            @media (max-width: 560px) {
+                right: -$tw-six;
+                width: $mini;
+                height: $mini;
+            }
+
+            @media (max-width: 520px) {
+                right: $mnormal;
+                top: $mnormal;
+            }
+        }
+
+        &_path {
+            @media (max-width: 520px) {
+                fill: $gr;
+            }
+        }
+    }
+}

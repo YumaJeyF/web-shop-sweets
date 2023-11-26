@@ -1,0 +1,23 @@
+@use '../../../../scss/vars' as *;
+@use '../../../../scss/styles' as *;
+
+
+.title_like {
+    margin-bottom: $vb_big;
+
+    @media (max-width: 768px) {
+        margin-bottom: $b-over;
+    }
+
+    @media (max-width: 400px) {
+        margin-bottom:$mnormal;
+    }
+}
+
+.btn {
+    margin-top: $b-big;
+
+    @media (max-width: 470px) {
+        margin-top: $vminmiddle;
+    }
+}

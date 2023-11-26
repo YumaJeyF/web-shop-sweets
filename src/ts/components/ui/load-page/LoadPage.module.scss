@@ -1,0 +1,25 @@
+@use '../../../../scss/extends' as *;
+@use '../../../../scss/vars' as *;
+
+.load {
+    @extend %max;
+    @extend %over-flex;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    left: 0;
+    background-color: $wh;
+    transition: all .3s ease;
+
+    &_icon {
+        width: 200px;
+
+        @media (max-width: 576px) {
+            width: 150px;
+        }
+
+        @media (max-width: 400px) {
+            width: 120px;
+        }
+    }
+}

@@ -1,0 +1,67 @@
+@use '../../../../../scss/vars' as *;
+
+.form {
+    max-width: 970px;
+    box-sizing: border-box;
+
+    @media (max-width: 850px) {
+        padding: $big;
+    }
+
+    @media (max-width: 470px) {
+        padding: $vmiddle;
+    }
+
+    @media (max-width: 320px) {
+        padding: $mini;
+    }
+
+    @media (max-width: 300px) {
+        margin: 0;
+        margin-block: auto;
+        border-radius: 0;
+    }
+
+    .block_title {
+        .title {
+            text-align: center;
+        }
+
+        .text_need {
+            text-align: center;
+            margin: $min 0 $big 0;
+            opacity: 0.8;
+
+            @media (max-width: 768px) {
+                font-size: $mnormal;
+            }
+
+            @media (max-width: 520px) {
+                margin: $min;
+            }
+
+            @media (max-width: 400px) {
+                font-size: $mini;
+            }
+        }
+    }
+
+    .btn {
+        width: 100%;
+        margin-top: $min;
+    }
+
+    .text_q {
+        margin: $big 0;
+        text-align: center;
+
+        @media (max-width: 768px) {
+            margin: $min 0;
+        }
+
+        .text_login {
+            font-weight: $fbw;
+            display: inline-block;
+        }
+    }
+}

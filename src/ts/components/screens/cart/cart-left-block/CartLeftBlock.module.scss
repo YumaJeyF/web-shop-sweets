@@ -1,0 +1,31 @@
+@use '../../../../../scss/vars' as *;
+@use '../../../../../scss/extends' as *;
+@use '../../../../../scss/styles' as *;
+
+.cart_left_sec {
+    .bl_s_pr {
+        background-color: $wh;
+        border-radius: $micro;
+        border: 1px solid $border-card;
+    }
+
+    .advertisement {
+        background: url('../../../../../img/advertisement.png') no-repeat center;
+        background-size: 100%;
+        margin: $vmiddle 0;
+        border-radius: $micro;
+        overflow: hidden;
+        border: 2px solid #FFE8C6;
+        font-weight: $fbw;
+
+        .text_inf {
+            font-size: $vmiddle;
+            padding: $normalFz $tw-six;
+
+            @media (max-width: 930px) {
+                font-size: $mnormal;
+                padding: $mnormal;
+            }
+        }
+    }
+}

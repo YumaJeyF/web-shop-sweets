@@ -1,0 +1,37 @@
+@use '../../../../../../scss/styles' as *;
+@use '../../../../../../scss/vars' as *;
+
+.card {
+    &:not(:last-child) {
+        margin-bottom: 48px;
+
+        @media (max-width: 778px) {
+            margin-bottom: $big;
+        }
+    }
+
+    .titlemid {
+        margin-bottom: $normal;
+
+        @media (max-width: 400px) {
+            margin-bottom: $b-low;
+        }
+    }
+
+    .texts {
+        .text {
+            @media (max-width: 620px) {
+                font-size: $mnormal;    
+            }
+
+            &:not(:last-child) {
+                margin-bottom: $normal;
+
+                @media (max-width: 778px) {
+                    margin-bottom: $ten;
+                }
+
+            }
+        }
+    }
+}

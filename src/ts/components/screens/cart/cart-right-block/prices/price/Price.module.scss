@@ -1,0 +1,25 @@
+@use '../../../../../../../scss/styles' as *;
+@use '../../../../../../../scss/extends' as *;
+@use '../../../../../../../scss/vars' as *;
+
+.prices_inf {
+    display: flex;
+    align-items: end;
+
+    &:not(:last-child) {
+        margin-bottom: $micro;
+    }
+
+    .res_text {
+        flex-shrink: 0;
+    }
+    
+    .dashed_line {
+        width: 100%;
+        border-bottom: 1px dashed $border-card;
+    }
+    
+    .price {
+        flex-shrink: 0;
+    }
+}

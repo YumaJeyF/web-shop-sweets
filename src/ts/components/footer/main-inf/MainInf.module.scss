@@ -1,0 +1,81 @@
+@use '../../../../scss/vars' as *;
+@use '../../../../scss/extends' as *;
+
+.main_inf {
+    @extend %flex;
+    gap: $big;
+    align-items: flex-start;
+    margin-bottom: $big;
+
+    @media (max-width: 1212px) {
+        gap: $vmiddle;
+    }
+
+    @media (max-width: 992px) {
+        gap: $micro;
+    }
+
+    @media (max-width: 866px) {
+        gap: $big;
+        display: block;
+        margin-bottom: 52px;
+    }
+    @media (max-width: 300px) {
+        margin-bottom: $big;
+    }
+
+    .inf {
+        @media (max-width: 866px) {
+            display: flex;
+            align-items: center;
+            gap: $big;
+
+            &:not(:last-child) {
+                margin-bottom: $normal;
+            }
+        }
+
+        .footer_left_block {
+            text-align: center;
+            max-width: 113px;
+
+            @media (max-width: 866px) {
+                max-width: none;
+                text-align: left;
+            }
+
+            @media (max-width: 355px) {
+                font-size: $over-mini;
+                line-height: 13.2px;
+            }
+        }
+
+        .left_logo {
+            display: flex;
+            margin: 0 auto;
+            margin-bottom: $mini;
+
+            @media (max-width: 866px) {
+                margin: 0;
+            }
+        }
+
+        .left_logo_first {
+            @media (max-width: 355px) {
+                width: 37px;
+            }
+        }
+
+        .left_logo_second {
+            @media (max-width: 355px) {
+                width: 43px;
+            }
+        }
+
+        .left_logo_third {
+            @media (max-width: 355px) {
+                width: 25px;
+            } 
+        }
+    }
+}

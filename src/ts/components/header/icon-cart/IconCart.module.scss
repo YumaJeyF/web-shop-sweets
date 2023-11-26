@@ -1,0 +1,18 @@
+@use '../../../../scss/extends' as *;
+@use '../../../../scss/vars' as *;
+
+.block_cart_inf {
+    position: relative;
+
+    .circle {
+        font-size: $ver-mini;
+        background-color: $black;
+        padding: 2px;
+        border-radius: 100%;
+        color: $wh;
+        @extend %over-flex;
+        position: absolute;
+        bottom: -1px;
+        right: -$micro;
+    }
+}

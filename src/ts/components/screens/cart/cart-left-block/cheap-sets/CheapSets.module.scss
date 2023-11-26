@@ -1,0 +1,8 @@
+@use '../../../../../../scss/styles' as *;
+@use '../../../../../../scss/extends' as *;
+@use '../../../../../../scss/vars' as *;
+
+.cheapGoods {
+    @extend %card-border;
+    background-color: $wh
+}

@@ -1,0 +1,12 @@
+@use '../../../../scss/vars' as *;
+
+.textarea {
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    max-height: 400px;
+
+    &::-webkit-scrollbar-track {
+        width: $ten;
+    }
+}

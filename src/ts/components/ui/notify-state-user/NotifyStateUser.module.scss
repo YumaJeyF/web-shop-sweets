@@ -1,0 +1,24 @@
+@use '../../../../scss/extends' as *;
+@use '../../../../scss/vars' as *;
+
+.notify {
+    @extend %card-border;
+    background-color: $wh;
+    transform: translateY(-100%);
+    transition: all .3s ease-in-out;
+    visibility: hidden;
+    position: fixed;
+    left: $vmiddle;
+    top: $vmiddle;
+    z-index: 1000;
+    max-width: 400px;
+
+    &_active {
+        transform: none;
+        visibility: visible;
+    }
+
+    .text {
+        padding: $vmiddle $so;
+    }
+}

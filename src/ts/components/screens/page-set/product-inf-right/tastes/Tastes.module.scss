@@ -1,0 +1,17 @@
+@use '../../../../../../scss/extends' as *;
+@use '../../../../../../scss/vars' as *;
+@use '../../../../../../scss/styles' as *;
+
+.tastes {
+    padding: 26px 28px $over 28px;
+    background-color: $wh;
+    @extend %card-border;
+
+    @media (max-width: 830px) {
+        padding: $min;
+    }
+
+    &_title {
+        margin-bottom: $mnormal;
+    }
+}

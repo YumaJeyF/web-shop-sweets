@@ -1,0 +1,27 @@
+@use '../../../../../scss/styles' as *;
+@use '../../../../../scss/vars' as *;
+
+.sec {
+
+    .title {
+        margin: 69px 0 37px 0;
+
+        @media (max-width: 768px) {
+            margin-bottom: $vmiddle;
+        }
+
+        @media (max-width: 400px) {
+            margin-top: $v-big;
+        }
+    }
+
+    .slider {
+        @media (max-width: 610px) {
+            max-width: 460px;
+        }
+
+        @media (max-width: 395px) {
+            max-width: 230px;
+        }
+    }
+}

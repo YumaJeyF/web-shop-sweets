@@ -1,0 +1,33 @@
+@use '../../../../../../scss/styles' as *;
+@use '../../../../../../scss/vars' as *;
+
+.title {
+    text-align: left;
+    margin-bottom: $normal;
+
+    @media (max-width: 768px) {
+        text-align: center;
+    }
+}
+
+.text {
+    margin-bottom: $b-big;
+
+    @media (max-width: 992px) {
+        font-size: $mnormal;
+        margin-bottom: $vmiddle;
+    }
+
+    @media (max-width: 768px) {
+        text-align: center;
+    }
+
+    @media (max-width: 470px) {
+        font-size: $mini;
+        margin-bottom: $over-mini;
+    }
+}
+
+.strong {
+    font-weight: $fbw;
+}

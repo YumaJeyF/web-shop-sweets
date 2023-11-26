@@ -1,0 +1,21 @@
+@use '../../../../../scss/vars' as *;
+
+.block_inf {
+    @media (max-width: 440px) {
+        display: block;
+    }
+
+    .arrow {
+        @media (max-width: 440px) {
+            display: none;
+        }
+    }
+
+    .text {
+        display: block;
+        
+        @media (max-width: 440px) {
+            margin-bottom: $micro;
+        }
+    }
+}

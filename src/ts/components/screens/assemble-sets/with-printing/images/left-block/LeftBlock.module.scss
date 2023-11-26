@@ -1,0 +1,71 @@
+@use '../../../../../../../scss/vars' as *;
+@use '../../../../../../../scss/extends' as *;
+@use '../../../../../../../scss/mixins' as *;
+
+.sec {
+    .loading_inf {
+        @extend %card-border;
+        padding: $ten;
+        background-color: $wh;
+        margin-bottom: $low;
+        overflow-y: hidden;
+        overflow-x: visible;
+        @include scrollbar($blue-back, $very_light, $micro, $micro);
+
+        .title {
+            margin-bottom: $low;
+        }
+
+        .data {
+            @extend %flex;
+            gap: $big;
+
+            @media (max-width: 320px) {
+                gap: $min;
+            }
+
+            .icons {
+                @extend %flex;
+                gap: $low;
+
+                .icon {
+                    width: 65px;
+                    height: 65px;
+
+                    @media (max-width: 320px) {
+                        width: 55px;
+                        height: 55px;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+    .catalog {
+        display: grid;
+        grid-template-columns: repeat(5, minmax($fifty, $oh-fifty));
+        column-gap: $big;
+        row-gap: $fifty;
+        margin-top: $big;
+        justify-content: center;
+
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(4, minmax($fifty, $oh-fifty));
+        }
+
+        @media (max-width: 830px) {
+            gap: $vmiddle;
+        }
+
+        @media (max-width: 730px) {
+            grid-template-columns: repeat(4, minmax($fifty, $oh));
+        }
+
+        @media (max-width: 470px) {
+            grid-template-columns: repeat(3, minmax($fifty, 90px));
+            margin-top: $min;
+        }
+    }
+}

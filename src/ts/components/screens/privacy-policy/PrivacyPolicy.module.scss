@@ -1,0 +1,46 @@
+@use '../../../../scss/vars' as *;
+@use '../../../../scss/extends' as *;
+
+.title {
+    margin-bottom: $so;
+
+    @media (max-width: 768px) {
+        margin-bottom: $big;
+    }
+
+    @media (max-width: 400px) {
+        margin-bottom: $vminmiddle;
+    }
+}
+
+.policy {
+    @extend %card-border;
+    background-color: $wh;
+    padding: 45px $over 55px $over;
+    margin-bottom: 92px;
+
+    @media (max-width: 768px) {
+        margin-bottom: $fifty;
+    }
+
+    @media (max-width: 400px) {
+        padding: $tw-one $mini $big $mini;
+    }
+
+    .text {
+        line-height: $over-middle;
+
+        @media (max-width: 400px) {
+            font-size: $mini;
+        }
+    }
+
+    .subtitle {
+        margin: $big 0 $vmiddle 0;
+        text-align: left;
+
+        @media (max-width: 400px) {
+            margin: $vminmiddle 0 $mnormal 0;
+        }
+    }
+}

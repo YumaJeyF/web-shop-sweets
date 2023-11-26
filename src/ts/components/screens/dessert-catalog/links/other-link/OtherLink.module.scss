@@ -1,0 +1,75 @@
+@use '../../../../../../scss/styles' as *;
+@use '../../../../../../scss/extends' as *;
+@use '../../../../../../scss/vars' as *;
+
+.other_link {
+    border-radius: $micro;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(1, minmax($ten, 369px));
+    gap: $ten;
+    text-decoration: none;
+    height: 100%;
+
+    @media (max-width: 470px) {
+        &:last-child {
+            grid-row: 3;
+            grid-column: 1 / -1;
+            display: block;
+            background-color: $blue-back;
+    
+            .title_o_l {
+                margin: 0;
+                margin-right: 37px;
+                text-align: right;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+    
+            .pic {
+                display: none;
+            }
+        }
+    }
+
+    .pic {
+        position: relative;
+        max-width: 230px;
+        height: 230px;
+        width: 100%;
+        margin: auto;
+        margin-top: $ten;
+
+        @media (max-width: 930px) {
+            max-width: 200px;
+            height: 200px;
+        }
+        
+        @media (max-width: 778px) {
+            max-width: 150px;
+            height: 150px;
+        }
+
+        @media (max-width: 576px) {
+            max-width: 120px;
+            max-height: 120px;
+        }
+
+        .image {
+            position: absolute;
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }   
+    }
+    
+    .title_o_l {
+        text-align: center;
+        margin: auto $ten 45px $ten;
+
+        @media (max-width: 778px) {
+            font-size: $mnormal;
+        }
+    }
+}

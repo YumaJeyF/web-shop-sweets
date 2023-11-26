@@ -1,0 +1,298 @@
+@use '../../../scss/vars' as *;
+@use '../../../scss/extends' as *;
+@use '../../../scss/mixins' as *;
+
+.header {
+    position: relative;
+    z-index: 1;
+
+    .nav {
+        @media (max-width: 1050px) {
+            background-color: $header-back;
+            padding: 0 $vminmiddle 0 $vminmiddle;
+        }
+    
+        .burger_menu {
+            @media (max-width: 1050px) {
+                display: block;
+                height: 100%;
+                padding: 50px  $vminmiddle $vmiddle $vminmiddle;
+                background-color: $header-back;
+                width: 576px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                transition: all 0.4s ease-in-out;
+                transform: translateX(-100%);
+            }
+    
+            @media (max-width: 576px) {
+                max-width: 576px;
+                width: auto;
+            }
+    
+            &.active {
+                transform: none;
+            }
+        }
+    
+        .burger_window { 
+            @media (max-width: 1050px) {
+                position: fixed;
+                left: 0;
+                z-index: 20;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $bc;
+                opacity: 0;
+                visibility: hidden;
+            }
+    
+            &.active {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+.navtop {
+    background-color: $header-back;
+    @extend %flex;
+    justify-content: center;
+
+    @media (max-width: 1050px) {
+        padding: $min $vminmiddle $min $vminmiddle;
+        display: block;
+        padding: 0;
+    }
+
+    .soc_block {
+        @extend %flex;
+        gap: 15px;
+    }
+
+    .block_nav {
+        gap: $mini;
+        padding: $min 0 $min $min;
+        margin-right: 76px;
+        @extend %flex;
+        
+        @media (max-width: 1160px) {
+            gap: $mini;
+            margin-right: $big;
+        }
+
+        @media (max-width: 1087px) {
+            margin-right: $mini;
+        }
+
+        @media (max-width: 1050px) {
+            display: block;
+            padding: $ver-mini 0 $ver-mini 0;
+            border-bottom: 1px solid $light-black;
+        }
+    
+        .li {
+            list-style: none;
+            @extend %over-flex;
+            
+            @media (max-width: 1050px) {
+                &:not(:last-child) {
+                    margin-bottom: $ver-mini;
+                }
+            }
+        }
+    }
+    
+    .link {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .cart_inf_mobile {
+        text-decoration: none;
+        @media (max-width: 1050px) {
+            display: none;
+        }
+    }
+
+    .soc {
+        @extend %over-flex;
+        gap: $min;
+    }
+}
+
+.block {
+    @extend %flex;
+    gap: $micro;
+    justify-content: center;
+    position: relative;
+    cursor: pointer; 
+    
+    .nt_text {
+        @extend %over-flex;
+    }
+}
+
+.dropdown_main {
+    position: relative;
+}
+
+.block_top {
+    margin-right: $big;
+    @media (max-width: 1160px) {
+        margin-right: $mini;
+    }
+    @media (max-width: 1050px) {
+        padding-top: $ver-mini;
+    }
+}
+
+.navbottom {
+    @extend %flex;
+    justify-content: center; 
+    gap: $big;
+    padding: $middle $mini $normal $mini;
+    background-color: $wh;
+
+    @media (max-width: 1077px) {
+        gap: $normal;
+    }
+
+    @media (max-width: 1050px) {
+        display: block;
+        padding: 0;
+        order: -1;
+        background-color: $header-back;
+    }
+
+    .text {
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    .logo_hidden {
+        @media (max-width: 1050px) {
+            display: none;
+        }
+    }
+
+    .nb_text {
+        @extend %over-flex;
+        cursor: pointer;
+    }
+
+    .arrow_open {
+        transition: all .3s;
+        transform: rotate(180deg);
+    }
+
+    .dropdown {
+        @include pos(absolute, 1);
+        top: 120%;
+        border: 1px solid $border-card;
+        box-shadow: $m_sh;
+        background-color: $wh;
+        max-width: $w-card;
+        width: $w-card;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s ease-in-out;
+        background-color: $wh;
+        display: grid;
+        margin: auto;
+
+        @media (max-width: 1390px) {
+            max-width: 220px;
+        }
+
+        @media (max-width: 1050px) {
+            position: static;
+            background: none;
+            box-shadow: none;
+            max-height: 0;
+        }
+
+        &_open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        li {
+            &:not(:last-child) {
+                .link {
+                    border-bottom: 1px solid $border-card;
+                }
+                
+                @media (max-width: 1050px) {
+                    margin-bottom: $ver-mini;
+                }
+            }
+
+            &:first-child {
+                @media (max-width: 1050px) {
+                    margin-top: $ver-mini;
+                }
+            }
+
+            &:hover {
+                background-color: $back;
+
+                @media (max-width: 1050px) {
+                    background: none;
+                }
+            }
+        }
+
+        .link {
+            padding: $mnormal;
+            text-decoration: none;
+            cursor: pointer;
+            color: $gr;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+
+            @media (max-width: 1390px) {
+                padding: $mini;
+            }
+
+            @media (max-width: 1050px) {
+                text-align: center;
+                font-size: $mini;
+                padding: 0;
+            }
+        }
+    }
+}
+
+.city_mobile {
+    display: none;
+    justify-content: center;
+    @media (max-width: 1050px) {
+        display: flex;
+    }
+}
+
+.city_desktop {
+    @media (max-width: 1050px) {
+        display: none;        
+    }
+}
+
+.burger_padding {
+    @media (max-width: 1050px) {
+        padding: $ver-mini 0;
+        border-bottom: 1px solid $light-black;
+    }
+}
+
+.burger_pad_per {
+    @media (max-width: 1050px) {
+        padding: $low 0;
+        border-bottom: 1px solid $light-black;
+    }
+}

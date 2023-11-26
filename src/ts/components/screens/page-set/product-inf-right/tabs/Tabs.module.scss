@@ -1,0 +1,65 @@
+@use '../../../../../../scss/vars' as *;
+@use '../../../../../../scss/extends' as *;
+@use '../../../../../../scss/styles' as *;
+
+.tabs {
+    background-color: $wh;
+    padding: $over-middle;
+    padding-bottom: 57px;
+    @extend %card-border;
+
+    @media (max-width: 830px) {
+        padding: $vmiddle;
+    }
+
+    .btns_tab {
+        @extend %flex;
+        border-bottom: 1px solid $border-card;
+        margin-bottom: $so;
+
+        @media (max-width: 830px) {
+            margin-bottom: $vmiddle;
+        }
+    }
+
+    .btn {
+        @extend %btn-reset;
+        cursor: pointer;
+        padding: 0 $mnormal $min $mnormal;
+        font-weight: $fbw;
+        margin-bottom: -3px;
+
+        &:hover {
+            opacity: 0.6;
+        }
+
+        &_active {
+            padding-bottom: $ver-mini;
+            border-bottom: 4px solid $red;
+        }
+
+        &_accordeon {
+            display: none;
+        }
+    }
+
+    .tab_inf {
+        display: none;
+
+        &_open {
+            display: block;
+        }
+    }
+
+    .composition {
+
+    }
+
+    .composition_nutritional {
+
+    }
+
+    .conditions_shelf_life {
+
+    }
+}

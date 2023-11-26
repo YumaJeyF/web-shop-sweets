@@ -1,0 +1,84 @@
+@use '../../../../scss/mixins' as *;
+@use '../../../../scss/vars' as *;
+
+.burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .btn_burger {
+        position: relative;
+        z-index: 21;
+        width: $vmiddle;
+        height: $vmiddle;
+        cursor: pointer;
+        display: none;
+
+        @media (max-width: 1050px) {
+            display: block;
+            margin-right: auto;
+        }
+    
+        .line {
+            transition: all 0.4s;
+            &:nth-child(1) {
+                @include btnBurger(2px);
+    
+                &.open {
+                    top: 50%;
+                    transform: translateY(-50%) rotate(45deg);
+                }
+            }
+    
+            &:nth-child(2) {
+                @include btnBurger(50%);
+                transform: translateY(-50%);
+                
+                &.open {
+                    transform: translateY(-50%) rotate(-45deg);
+                }
+    
+            }
+    
+            &:nth-child(3) {
+                @include btnBurger(auto);
+                bottom: 2px;
+                width: $over-mini;
+    
+                &.open {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .company_logo {
+        margin-right: auto;
+        display: none;
+
+        @media (max-width: 1050px) {
+            height: 80px;
+            width: 80px;
+            display: block;
+            margin-left: $vmiddle;
+        }
+    
+        @media (max-width: 490px) {
+            width: $fifty;
+            height: $fifty;        
+        }
+    
+        .back {
+            fill: none;
+        }
+    }
+
+    .cart_icon_mobile {
+        display: none;
+        cursor: pointer;
+        @media (max-width: 1050px) {
+            display: block;
+        }
+    }
+
+}

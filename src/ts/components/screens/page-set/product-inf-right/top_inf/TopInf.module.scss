@@ -1,0 +1,32 @@
+@use '../../../../../../scss/vars' as *;
+@use '../../../../../../scss/styles' as *;
+
+.title_inf {
+    text-align: left;
+    margin-bottom: $ver-mini;
+
+    @media (max-width: 690px) {
+        text-align: center;
+    }
+
+    @media (max-width: 400px) {
+        margin-bottom: $ten;
+    }
+}
+
+.text {
+    margin-bottom: $over-middle;
+    
+    @media (max-width: 830px) {
+        font-size: $min;
+    }
+    
+    @media (max-width: 690px) {
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 400px) {
+        margin-bottom: -4px;
+    }
+}

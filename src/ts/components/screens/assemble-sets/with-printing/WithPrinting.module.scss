@@ -1,0 +1,5 @@
+@use '../../../../../scss/vars' as *;
+
+.catalog_quantity {
+    grid-template-columns: repeat(3, minmax($oh, $w-card));
+}

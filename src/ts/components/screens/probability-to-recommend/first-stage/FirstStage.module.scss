@@ -1,0 +1,131 @@
+@use '../../../../../scss/vars' as *;
+@use '../../../../../scss/extends' as *;
+@use '../../../../../scss/mixins' as *;
+
+.sec {
+    .text {
+        margin-bottom: $oh;
+        text-align: center;
+
+        @media (max-width: 768px) {
+            margin-bottom: 70px;
+        }
+
+        @media (max-width: 470px) {
+            margin-bottom: $fifty;
+        }
+    }
+
+    .catalog {
+        display: grid;
+        grid-template-columns: repeat(5, minmax($so, $hc));
+        gap: $big;
+        margin-bottom: $fifty;
+        justify-content: center;
+
+        @media (max-width: 1050px) {
+            grid-template-columns: repeat(3, minmax($so, $hc));
+            column-gap: $min;
+            row-gap: $fifty;
+        }
+
+        @media (max-width: 576px) {
+            grid-template-columns: repeat(2, minmax($so, $hc));
+        }
+
+        @media (max-width: 400px) {
+            column-gap: $low;
+            row-gap: 46px;
+            margin-bottom: $big;
+        }
+
+        @media (max-width: 350px) {
+            grid-template-columns: repeat(1, minmax($so, $hc));
+        }
+
+        .card {
+            @extend %card-border;
+            background-color: $wh;
+
+            &:last-child {
+                @media (max-width: 576px) {
+                    position: relative;
+                    left: 50%;
+                }
+
+                @media (max-width: 350px) {
+                    position: static;
+                }
+            }
+
+            &_top {
+                border-bottom: 1px solid $border-card;
+                background-color: #F7EBE5;
+                position: relative;
+                height: $so;
+
+                @media (max-width: 470px) {
+                    height: $tw-six;
+                }
+            }
+    
+            &_image {
+                position: absolute;
+                bottom: $b-low;
+                left: 50%;
+                transform: translateX(-50%);
+
+                @media (max-width: 470px) {
+                    max-width: 70px;
+                }
+
+                @media (max-width: 400px) {
+                    max-width: 64px;
+                    max-height: $so;
+                }
+            }
+    
+            &_bottom {
+                padding: $ver-mini $mnormal $mnormal $mnormal;
+
+                @media (max-width: 470px) {
+                    padding: $ten $b-low $tr $b-low;
+                }
+            }
+    
+            &_checkbox {
+                @include checkbox(100%, $over-mini, $vmiddle);
+
+                @media (max-width: 350px) {
+                    width: $mnormal;
+                    height: $mnormal;
+                    margin-right: $low;
+                }
+            }
+    
+            &_text {
+                cursor: pointer;
+
+                @media (max-width: 350px) {
+                    line-height: 14.63px;
+                }
+            }
+        }
+    }
+
+    .btn {
+        margin: 0 auto 104px auto;
+        
+        @media (max-width: 768px) {
+            margin-bottom: $fifty;
+        }
+
+        @media (max-width: 470px) {
+            margin-bottom: $so;
+        }
+
+        @media (max-width: 400px) {
+            padding: $mnormal $big;
+        }
+    }
+}

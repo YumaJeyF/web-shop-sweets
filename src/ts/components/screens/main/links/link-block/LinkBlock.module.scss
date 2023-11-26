@@ -1,0 +1,66 @@
+@use '../../../../../../scss/vars' as *;
+@use '../../../../../../scss/extends' as *;
+
+.link {
+    text-decoration: none;
+    background-size: contain;
+    background: no-repeat center local;
+    text-align: center;
+    color: $black;
+    @extend %over-flex;
+
+    @media (max-width: 370px) {
+        background: none;
+    }
+
+    .name_link {
+        font-size: $vmiddle;
+        font-weight: $fbw;
+        margin: $vmiddle 0 $ten 0;
+        @extend %over-flex;
+        gap: $tr;
+        
+        @media (max-width: 370px) {
+            text-align: left;
+            justify-content: start;
+            font-size: $mini;
+            margin: 0;
+            padding: $mnormal 0;
+            border-bottom: 1px solid $bord-light;
+        }
+    }
+    
+    .inner_block  {
+        margin: 0 80px;
+
+        @media (max-width: 992px) {
+            margin: 0 $big;
+        }
+
+        @media (max-width: 768px) {
+            margin: 0 $min;
+        }
+
+        @media (max-width: 370px) {
+            margin: 0;
+        }
+    }
+    
+    .icon_link {
+        @media (max-width: 370px) {
+            display: none;
+        }
+    }
+    
+    .text_inf {
+        @media (max-width: 370px) {
+            display: none;
+        }
+    }
+    
+    .arrow_right {
+        @media (max-width: 370px) {
+            margin-left: auto;
+        }
+    }
+}

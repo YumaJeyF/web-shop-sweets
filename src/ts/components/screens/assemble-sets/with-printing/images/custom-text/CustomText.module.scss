@@ -1,0 +1,88 @@
+@use '../../../../../../../scss/vars' as *;
+@use '../../../../../../../scss/extends' as *;
+
+.content {
+    padding-top: $f-th;
+    padding-bottom: $vmiddle;
+
+    @media (max-width: 530px) {
+        padding-top: $tw-six;
+        padding-bottom: $over-middle;
+    }
+
+    &_text {
+        @media (max-width: 470px) {
+            font-size: $mini;
+        }
+    }
+
+    &_inner {
+        max-width: 406px;
+
+        .title {
+            margin-bottom: $ver-mini;
+        }
+
+        .text {
+            text-align: center;
+            margin-bottom: 23px;
+
+            @media (max-width: 470px) {
+                margin-bottom: $mnormal;
+            }
+        }
+
+        .textarea {
+            resize: none;
+            width: 100%;
+            border: 1px solid $border-card;
+            padding: $tr $mnormal;
+            background-color: $back;
+            min-height: 81px;
+            margin-bottom: 23px;
+            outline: none;
+            box-sizing: border-box;
+
+            @media (max-width: 470px) {
+                margin-bottom: $tr;
+            }
+        }
+
+
+        .colors {
+            @extend %flex;
+            gap: $middle;
+            margin-top: $vmiddle;
+
+            @media (max-width: 530px) {
+                align-items: start;
+                gap: $middle;
+            }
+
+            @media (max-width: 470px) {
+                margin-bottom: $mini;
+            }
+
+            &_catalog {
+                display: grid;
+                grid-template-columns: repeat(12, $vmiddle);
+                gap: $ten;
+
+                @media (max-width: 530px) {
+                    grid-template-columns: repeat(6, $vmiddle);
+                }
+
+                @media (max-width: 300px) {
+                    grid-template-columns: repeat(3, $vmiddle);
+                }
+            }
+        }
+
+        .btn {
+            max-width: 234px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+}

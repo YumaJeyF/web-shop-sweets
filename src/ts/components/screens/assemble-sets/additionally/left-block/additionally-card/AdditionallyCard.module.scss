@@ -1,0 +1,34 @@
+@use '../../../../../../../scss/vars' as *;
+@use '../../../../../../../scss/extends' as *;
+
+.card {
+    @extend %card-border;
+    background-color: $wh;
+
+
+    .top {
+        margin: $over-mini $mini $b-over $mini;
+
+        .pic {
+            position: relative;
+            max-width: 244px;
+            max-height: 192px;
+        }
+
+        .name {
+            margin-top: $tw-one;
+        }
+    }
+
+    .bottom {
+        border-top: 1px solid $border-card;
+        padding: $over-mini $mini $tw-one $mini;
+        @extend %flex;
+        gap: $mini;
+
+        .price {
+            margin-right: auto;
+            color: $red;
+        }
+    }
+}

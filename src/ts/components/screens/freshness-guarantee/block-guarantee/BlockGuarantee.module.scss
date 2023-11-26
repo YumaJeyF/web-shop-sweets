@@ -1,0 +1,41 @@
+@use '../../../../../scss/styles' as *;
+@use '../../../../../scss/vars' as *;
+@use '../../../../../scss/extends' as *;
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax($oh, $care-inf));
+    gap: $big;
+    justify-content: center;
+
+    @media (max-width: 680px) {
+        gap: $min;
+    }
+
+    @media (max-width: 470px) {
+        grid-template-columns: repeat(1, minmax($oh, 200px));
+        justify-content: center;
+    }
+
+    .card {
+        &:not(:last-child) {
+            margin-bottom: $b-over;
+        }
+    }
+
+    .pic {
+        max-width: $care-inf;
+        max-height: $care-inf;
+    }
+
+    .text {
+        font-weight: $fbw;
+        text-align: center;
+        margin-top: $over-middle;
+
+        @media (max-width: 580px) {
+            font-size: $mini;
+            margin-top: $over-mini;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@use '../../../../../scss/styles' as *;
+@use '../../../../../scss/vars' as *;
+
+.slider {
+    margin-bottom: 87px;
+
+    @media (max-width: 768px) {
+        margin-bottom: 70px;
+    }
+
+    @media (max-width: 576px) {
+        margin-bottom: 41px;
+    }
+
+    .title {
+        margin: 74px 0 $vmiddle 0;
+
+        @media (max-width: 768px) {
+            margin: 60px 0 $min 0;
+        }
+
+        @media (max-width: 440px) {
+            margin: $big 0 $ten 0;
+        }
+    }
+
+    .text {
+        text-align: center;
+        margin-bottom: 37px;
+
+        @media (max-width: 768px) {
+            margin-bottom: $vmiddle;
+        }
+
+        @media (max-width: 600px) {
+            font-size: $mini;
+        }
+    }
+}

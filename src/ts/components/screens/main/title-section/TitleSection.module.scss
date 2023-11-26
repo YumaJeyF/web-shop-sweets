@@ -1,0 +1,47 @@
+@use '../../../../../scss/vars' as *;
+
+.sec {
+    .head_block {
+        display: grid;
+        grid-template-columns: repeat(1, minmax($so, 469px) minmax($so, $bl-inf));
+        gap: $mbtitle;
+        padding-top: $so;
+        height: 475px;
+        box-sizing: border-box;
+    
+        @media (max-width: 920px) {
+            height: 415px;
+        }
+
+        @media (max-width: 768px) {
+            height: 365px;
+        }
+
+        @media (max-width: 670px) {
+            height: auto;
+            padding-top: 0;
+        }
+    }
+
+    .right_block {
+        align-self: center;
+    }
+    
+    .pic_desktop {
+        background-position: center center !important;
+        max-width: 469px;
+        max-height: 435px;
+    }
+    
+    .pic_mobile {
+        max-width: 400px;
+    }
+    
+    .sec_company {
+        margin-bottom: 59px;
+    
+        @media (max-width: 400px) {
+            margin-bottom: $so
+        }
+    }
+}

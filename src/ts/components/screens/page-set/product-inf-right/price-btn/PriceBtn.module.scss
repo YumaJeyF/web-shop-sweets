@@ -1,0 +1,78 @@
+@use '../../../../../../scss/extends' as *;
+@use '../../../../../../scss/vars' as *;
+@use '../../../../../../scss/mixins' as *;
+@use '../../../../../../scss/styles' as *;
+
+.price_btn {
+    @extend %flex;
+    padding: $min 28px;
+    background-color: $wh;
+    margin: $ten 0 31px 0;
+    @extend %card-border;
+
+    @media (max-width: 830px) {
+        margin-bottom: $vmiddle;
+    }
+
+    @media (max-width: 690px) {
+        grid-row: 1;
+        margin: 0;
+    }
+
+    @media (max-width: 400px) {
+        padding: $ten;
+        padding-left: 23px;
+    }
+
+    @media (max-width: 315px) {
+        display: block;
+    }
+
+    .price {
+        color: $red;
+        font-weight: $fbw;
+
+        @media (max-width: 830px) {
+            font-size: $normalFz;
+        }
+    }
+
+    .btn {
+        @extend %flex;
+        gap: $ver-mini;
+        margin-left: auto;
+        @include btn-secondary($min $mbtitle);
+        font-weight: $fbw;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &_disabled {
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        @media (max-width: 830px) {
+            padding: $low $vmiddle;
+        }
+
+        @media (max-width: 400px) {
+            font-size: $over-mini;
+        }
+
+        @media (max-width: 315px) {
+            margin-left: 0;
+            margin-top: $ten;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .icon {
+            @media (max-width: 400px) {
+                width: $over-mini;
+                height: $mnormal;
+            }
+        }
+    }
+}

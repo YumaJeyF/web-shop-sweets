@@ -1,0 +1,12 @@
+@use '../../../../../scss/vars' as *;
+
+.sec-complete-orders {
+    .swiper-pagination {
+        justify-content: center;
+        margin-top: $over;
+
+        @media (max-width: 400px) {
+            margin-top: $vminmiddle;
+        }
+    }
+}

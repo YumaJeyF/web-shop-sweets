@@ -1,0 +1,18 @@
+@use '../../../../scss/vars' as *;
+@use '../../../../scss/extends' as *;
+
+.btn {
+    @extend %btn-reset;
+    @extend %over-flex;
+    color: $wh;
+    background-color: $blue;
+    border-radius: $three;
+    cursor: pointer;
+    max-height: none;
+    padding: $mnormal;
+
+    &_disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}

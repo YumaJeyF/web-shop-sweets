@@ -1,0 +1,134 @@
+@use '../../../../../scss/vars' as *;
+@use '../../../../../scss/styles' as *;
+@use '../../../../../scss/extends' as *;
+@use '../../../../../scss/mixins' as *;
+
+.sec_left_inf {
+    .themes {
+        @extend %flex;
+        gap: $ten;
+        overflow-x: visible;
+        overflow-y: hidden;
+
+        .theme {
+            @extend %flex;
+            flex-shrink: 0;
+
+            &::after {
+                content: '';
+                border: solid transparent;
+                border-width: 14px 0px;
+                border-left: $over-mini solid $header-back;
+            }
+
+            .theme_text {
+                background-color: $header-back;
+                padding: 6px $b-low 6px $over-mini;
+                position: relative;
+                flex-shrink: 0;
+            }
+        }
+    }
+
+    .text {
+        @media (max-width: 768px) {
+            font-size: $mnormal;
+            line-height: 17.05px;
+        }   
+
+        @media (max-width: 370px) {
+            font-size: $mini;
+        }
+    }
+
+    .main_inf {
+        margin: $vmiddle 0;
+
+        @media (max-width: 768px) {
+            margin: $mnormal 0;
+        }
+
+        .title_big {
+            margin-bottom: $vmiddle;
+            text-align: left;
+
+            @media (max-width: 768px) {
+                font-size: $over-middle;
+            }
+
+            @media (max-width: 555px) {
+                text-align: center;
+            }
+
+            @media (max-width: 370px) {
+                margin-bottom: $mnormal;
+            }
+        }
+
+        .texts {
+            .text_mi {
+                line-height: 23.4px;
+
+                @media (max-width: 768px) {
+                    line-height: 17.05px;
+                }
+    
+                &:first-child {
+                    margin-bottom: $vmiddle;
+
+                    @media (max-width: 768px) {
+                        margin-bottom: $ten;
+                    }
+
+                }
+            }
+
+        }
+
+        .title_mini {
+            padding: $vmiddle 0;
+            border-bottom: 1px solid $border-card;
+
+            @media (max-width: 768px) {
+                font-size: $mnormal;
+                padding: $mnormal 0;
+            }
+        }
+    }
+
+    .block_variants {
+        .variants {
+            margin-top: $micro;
+            .variant {
+                @extend %flex;
+                gap: $ten;
+    
+                &:not(:last-child) {
+                    margin-bottom: $micro;
+                }
+            }
+        }
+
+        .text_variants {
+            line-height: 22px;
+
+            @media (max-width: 768px) {
+                line-height: 17.05px;
+            }
+
+            @media (max-width: 370px) {
+                font-size: $mini;
+            }
+
+        }
+
+        .variants_title {
+            line-height: 23.4px;
+
+            
+            @media (max-width: 768px) {
+                fline-height: 17.05px;
+            }
+        }
+    }
+}

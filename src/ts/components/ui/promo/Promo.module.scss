@@ -1,0 +1,115 @@
+@use '../../../../scss/extends' as *;
+@use '../../../../scss/vars' as *;
+@use '../../../../scss/styles' as *;
+@use '../../../../scss/mixins' as *;
+
+.form {
+    .promo {
+        @extend %over-flex;
+        gap: $tr;
+        margin: $vmiddle $big;
+
+        @media (max-width: 930px) {
+            display: block;
+            gap: 0;
+            justify-self: center;
+            margin: 0;
+            margin-top: $vmiddle;
+        }
+
+        &_title {
+            @media (max-width: 930px) {
+                margin-bottom: $ten;
+                font-size: $mini;
+                text-align: center;
+            } 
+        }
+
+        .field_inf {
+            @extend %flex;
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+   
+            @media (max-width: 930px) {
+                justify-content: center;
+            }
+
+            @media (max-width: 287px) {
+                display: block;
+            }
+
+            .textfield {
+                border: 1px solid $border-card;
+                background-color: $back;
+                padding: $over-mini;
+                outline: none;
+                border-right: none;
+                background-color: $wh;
+            
+                @media (max-width: 520px) {
+                    font-size: $mini;
+                    padding: $ten;
+                }
+
+                @media (max-width: 287px) {
+                    width: 100%;
+                }
+            }
+
+            .block_inp {
+                position: relative;
+
+                .load {
+                    position: absolute;
+                    @extend %max;
+                    @extend %over-flex;
+                    top: 0;
+                    left: 0;
+                    background-color: $border-card;
+
+                    &_icon {
+                        width: 62px;
+                    }
+                }
+            }
+    
+            .btn_apply {
+                padding: $mini;
+                color: $wh;
+ 
+                @media not all and (hover: none) {
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+
+                @media (max-width: 930px) {
+                    padding: $tr;
+                }
+
+                @media (max-width: 520px) {
+                    font-size: $over-mini;
+                    padding: $ten;
+                }
+
+                @media (max-width: 287px) {
+                    width: 100%;
+                    justify-content: center;
+                    margin-top: $ten;
+                }
+            }
+        }
+    } 
+
+    .error {
+        margin-left: $big;
+        margin-bottom: $vmiddle;
+
+        @media (max-width: 930px) {
+            text-align: center;
+            margin-top: $ten;
+            margin-bottom: 0;
+        }
+    }
+}

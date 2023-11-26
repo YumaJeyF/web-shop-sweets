@@ -1,0 +1,76 @@
+@use '../../../../../../scss/extends' as *;
+@use '../../../../../../scss/vars' as *;
+@use '../../../../../../scss/mixins' as *;
+
+.card {
+    border-radius: $micro;
+    overflow: hidden;
+    max-height: 380px;
+    max-width: $care-inf;
+
+    .block_image {
+        position: relative;
+        max-height: $care-inf;
+        min-height: $care-inf;
+        overflow: hidden;
+    }
+
+    .picture {
+        @include pos(absolute, 1);
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .line {
+        position: absolute;
+        @extend %flex;
+        z-index: 2;
+
+        .line_inf {
+            padding: 4.5px 0 4.5px $ten;
+        }
+        
+        .line_inf_others {
+            width: 100%;
+            @extend %over-flex;
+            padding: $micro $vmiddle;
+        }
+
+        .line_main {
+            @media (max-width: 340px) {
+                font-size: $tr;
+            }
+        }
+    }
+
+    .right_triangle {
+        border-width: 13px 7px 12px 12px;
+        border-right: 7px solid transparent;
+
+        @media (max-width: 340px) {
+            border-width: 10px 7px 12px 12px;
+        }
+    }
+
+    .line_over_minimal {
+        padding: 4px $ten;
+    }
+
+    .block_inf {
+        margin-top: -3px;
+        height: 110px;
+        @media (max-width: 340px) {
+            height: auto;
+        }
+    }
+
+    .text_stocks {
+        text-align: center;
+        padding: $over $vmiddle $big $vmiddle;
+
+        @media (max-width: 340px) {
+            padding: $middle;
+        }
+    }
+}

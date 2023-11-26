@@ -1,0 +1,15 @@
+@use '../../../../../../../scss/vars' as *;
+
+.crop {
+    .ReactCrop {
+
+        &__drag-handle {
+            position: static;
+
+            &::after {
+                border: none;
+                background-color: $blue;
+            }
+        }
+    }
+}

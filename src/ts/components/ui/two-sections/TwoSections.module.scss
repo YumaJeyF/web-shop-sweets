@@ -1,0 +1,34 @@
+@use '../../../../scss/vars' as *;
+@use '../../../../scss/extends' as *;
+
+.sections {
+    padding: 0 $mnormal;
+    background: no-repeat right 0 top 0 local;
+    background-size: contain;
+
+    .blocks_inf {
+        justify-content: center;
+
+        @media (max-width: 900px) {
+            gap: $vmiddle;
+        }
+    
+        @media (max-width: 778px) {
+            gap: $ten;
+        }
+
+        @media (max-width: 670px) {
+            margin-top: 43px;
+            display: block;
+        }
+    }
+
+    .pic {
+        background: no-repeat center top 0 local;
+        background-size: contain;
+    }
+
+    .pic_mobile {
+        @extend %max;
+    }
+}

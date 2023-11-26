@@ -1,0 +1,83 @@
+@use '../../../../scss/vars' as *;
+@use '../../../../scss/styles' as *;
+@use '../../../../scss/mixins' as *;
+@use '../../../../scss/extends' as *;
+
+.notification {
+
+    .inf {
+        background-color: $wh;
+        padding: 48px 46px 27px 46px;
+        border: 1px solid $border-card;
+        border-radius: $micro;
+        position: relative;
+        margin: $so;
+
+        @media (max-width: 530px) {
+            margin: $vmiddle;
+            padding: $b-big $normal 33px $normal;
+        }
+    }
+
+    .text {
+        text-align: center;
+        margin: 27px 0 $mbtitle 0;
+
+        @media (max-width: 660px) {
+            margin: $vmiddle 0 $big 0;
+        }
+
+        @media (max-width: 400px) {
+            font-size: $mini;
+        }
+    }
+
+    .btn_close {
+        right: -31px;
+
+        @media (max-width: 560px) {
+            right: 0;
+            top: -$over;
+        }
+    }
+
+    .btns {
+        @extend %flex;
+        gap: $ten;
+
+        @media (max-width: 460px) {
+            flex-direction: column-reverse;
+            gap: $low;
+        }
+
+        .btn_next {
+            padding: 0;
+        }
+    
+        .btn {
+            width: 234px;
+            height: 50px;
+            @extend %over-flex;
+            align-items: center;
+
+            @media (max-width: 660px) {
+                width: 189px;
+                height: $so;
+            }
+
+            @media (max-width: 400px) {
+                font-size: $over-mini;
+            }
+        }
+    
+        .btn_checkout_now {
+            @include btn-secondary(0);
+            
+            @media not all and (hover: none) {
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}

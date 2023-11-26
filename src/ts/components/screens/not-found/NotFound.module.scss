@@ -1,0 +1,76 @@
+@use '../../../../scss/vars' as *;
+@use '../../../../scss/extends' as *;
+
+.sec {
+    padding: 0 $mnormal;
+    background: no-repeat local center center;
+    background-size: cover;
+    padding: 109px $mnormal 60px;
+
+    @media (max-width: 576px) {
+        padding-top: 80px;
+        padding-bottom: $big;
+    }
+
+    @media (max-width: 400px) {
+        padding-top: $fifty;
+    }
+
+    @media (max-width: 340px) {
+        padding-bottom: $vmiddle;
+    }
+
+    .title {
+        font-size: $vmiddle;
+        text-align: center;
+        margin-bottom: 52px;
+    
+        @media (max-width: 576px) {
+            font-size: $middle;
+            margin-bottom: $big;
+        }
+
+        @media (max-width: 400px) {
+            font-size: $mnormal;
+            margin-bottom: 28px;
+        }
+
+        @media (max-width: 370px) {
+            font-size: $mini;
+        }
+    }
+
+    .pic {
+        max-width: 573px;
+        max-height: 260px;
+        margin: auto;
+
+        .image {
+            @extend %max;
+        }
+    }
+
+    .btn {
+        margin: 63px auto 0 auto;
+        width: 234px;
+        border: 1px solid;
+        @extend %over-flex;
+
+        &:hover {
+            opacity: 0.8;
+            background: none;
+        }
+
+        @media (max-width: 576px) {
+            margin-top: $big;
+        }
+
+        @media (max-width: 400px) {
+            width: 180px;
+        }
+
+        @media (max-width: 340px) {
+            margin-top: $vmiddle;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+@use '../../../../scss/styles' as *;
+@use '../../../../scss/vars' as *;
+
+.sec_inf {
+    margin-bottom: 75px;
+
+    @media (max-width: 400px) {
+        margin-bottom: $mbtitle;
+    }
+
+    .title {
+        margin: $over-middle 0 $tw-six 0;
+
+        @media (max-width: 400px) {
+            margin-bottom: $over-mini;
+        }
+    }
+
+    .text {
+        margin: 0 auto 52px auto;
+        text-align: center;
+        max-width: 663px;
+
+        @media (max-width: 680px) {
+            font-size: $mnormal;
+            margin-bottom: $big;
+        }
+
+        @media (max-width: 400px) {
+            font-size: $mini;
+            margin-bottom: 28px;
+        }
+    }
+}

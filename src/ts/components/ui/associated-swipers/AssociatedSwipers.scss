@@ -1,0 +1,48 @@
+@use '../../../../scss/vars' as *;
+@use '../../../../scss/extends' as *;
+
+.swiper {
+    .swiper-slide {
+        border-radius: 3px;
+        overflow: hidden;
+        position: relative;
+    }
+}
+
+.first_swiper {
+    margin-bottom: $mini;
+
+    @media (max-width: 400px) {
+        margin-bottom: $ver-mini;
+    }
+}
+
+.second_swiper {
+    max-height: $oh;
+    
+    .swiper-wrapper {
+        max-height: $oh;
+
+        .swiper-slide {
+            max-height: $oh;
+            box-sizing: border-box;
+        }
+
+        .swiper-slide-active {
+            border: 3px solid $red;
+        }
+    }
+
+
+}
+
+.swipers {
+    
+    .pic {
+        height: 100%;
+        .img {
+            @extend %max;
+            object-fit: cover;
+        }
+    }
+}

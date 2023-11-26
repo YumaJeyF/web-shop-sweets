@@ -1,0 +1,25 @@
+@use '../../../../scss/extends' as *;
+@use '../../../../scss/vars' as *;
+@use '../../../../scss/styles' as *;
+
+.sec_inf_news {
+    display: grid;
+    grid-template-columns: repeat(2, minmax($oh, 567px));
+    gap: 31px;
+    align-items: start;
+    margin: 50px 0 90px 0;
+
+    @media (max-width: 768px) {
+        gap: $vmiddle;
+    }
+
+    @media (max-width: 555px) {
+        grid-template-columns: repeat(1, minmax($oh, 567px));
+        gap: 31px;
+        margin: $vmiddle 0 40px 0;
+    }
+
+    @media (max-width: 370px) {
+        margin: $normal 0 40px 0;    
+    }
+}

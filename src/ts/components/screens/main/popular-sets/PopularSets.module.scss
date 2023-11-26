@@ -1,0 +1,30 @@
+@use '../../../../../scss/extends' as *;
+@use '../../../../../scss/vars' as *;
+@use '../../../../../scss/mixins' as *;
+@use '../../../../../scss/styles' as *;
+
+
+.popular_sets {
+    .title_sets {
+        margin: 108px 0 42px 0;
+
+        @media (max-width: 470px) {
+            margin: 37px 0 $vminmiddle;
+        }
+    }
+    
+    .not_popular_products {
+        font-size: $mnormal;
+        font-weight: $fbw;
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+
+    .btn {
+        margin-top: $b-big;
+        
+        @media (max-width: 470px) {
+            margin-top: $over;
+        }
+    }
+}

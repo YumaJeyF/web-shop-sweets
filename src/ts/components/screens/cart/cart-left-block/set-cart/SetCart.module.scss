@@ -1,0 +1,30 @@
+@use '../../../../../../scss/extends' as *;
+@use '../../../../../../scss/vars' as *;
+@use '../../../../../../scss/styles' as *;
+
+.set {
+    padding: $normal $vmiddle 26px $normal;
+    text-decoration: none;
+    display: block;
+    color: $gr;
+
+    @media (max-width: 350px) {
+        padding: $over-middle $tr $ver-mini $ver-mini;
+    }
+
+    &:not(:last-child) {
+        border-bottom: 1px solid $border-card;
+    }
+
+    .content {
+        display: flex;
+        align-items: start;
+        gap: $min;
+        position: relative;
+
+        .pic {
+            max-width: 80px;
+            max-height: 80px;
+        }
+    }
+}

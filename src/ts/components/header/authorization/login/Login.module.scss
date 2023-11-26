@@ -1,0 +1,48 @@
+@use '../../../../../scss/vars' as *;
+@use '../../../../../scss/extends' as *;
+
+.form {
+    max-width: 570px;
+    display: grid;
+    grid-template-columns: repeat(1, minmax($so, $card));
+
+    @media (max-width: 576px) {
+        padding: $big;
+    }
+    
+    @media (max-width: 350px) {
+        padding: $vmiddle;
+    }
+
+    .title {
+        margin-bottom: $big;
+
+        @media (max-width: 576px) {
+            margin-bottom: $min;
+        }
+    }
+
+    .btn {
+        margin: 15px 0;
+
+        @media (max-width: 400px) {
+            margin: $ten 0;
+        }
+    }
+            
+    .text_pass {
+        text-align: right;
+        margin-top: 6px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .text_bottom {
+        text-align: center;
+    }
+
+    .text_link {
+        cursor: pointer;
+        font-weight: $fbw;
+    }
+}

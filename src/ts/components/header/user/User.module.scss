@@ -1,0 +1,30 @@
+@use '../../../../scss/vars' as *;
+@use '../../../../scss/extends' as *;
+
+.btn {
+    @extend %btn-reset;
+    background-color: #e1edf7;
+    border: 1px solid #a3cff3;
+    padding: $micro $vmiddle;
+    border-radius: $micro;
+    cursor: pointer;
+
+    @media not all and (hover: none) {
+        &:hover {
+            background-color: $very_light;
+        }
+    }
+
+    @media (max-width: 1050px) {
+       margin-right: $vmiddle; 
+    }
+
+    @media (max-width: 490px) {
+        margin-right: $ten;
+        padding: 2px $ten;
+    }
+
+    @media (max-width: 355px) {
+        font-size: $over-mini;
+    }
+}

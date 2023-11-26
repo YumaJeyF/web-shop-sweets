@@ -1,0 +1,14 @@
+@use '../../../../../../../../scss/vars' as *;
+@use '../../../../../../../../scss/extends' as *;
+
+.card {
+
+    .pic {
+        max-width: $oh-fifty;
+        max-height: $oh-fifty;
+        @extend %images-custom;
+        margin-bottom: $seven;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+}

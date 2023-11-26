@@ -1,0 +1,13 @@
+@use '../../../../../../scss/styles' as *;
+@use '../../../../../../scss/vars' as *;
+@use '../../../../../../scss/extends' as *;
+
+.card {
+    @extend %card-border;
+    padding: $min $mini $over $mini;
+
+    .name {
+        margin-top: $over-middle;
+        font-weight: $fbw;
+    }
+}

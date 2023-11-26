@@ -1,0 +1,48 @@
+@use '../../../../../../scss/styles' as *;
+@use '../../../../../../scss/vars' as *;
+@use '../../../../../../scss/extends' as *;
+@use '../../../../../../scss/mixins' as *;
+
+.accordeon {
+    background-color: $wh;
+    @extend %card-border;
+    margin-bottom: $over-middle;
+
+    .btn {
+        width: 100%;
+        @extend %btn-reset;
+        @extend %flex;
+        padding: $mnormal $mnormal $tr $vminmiddle;
+        border-bottom: 1px solid $border-card;
+        font-weight: $fbw;
+        cursor: pointer;
+    }
+
+    .btn_bt {
+        border-top: 1px solid $border-card;
+    }
+    
+    .arrow {
+        margin-left: auto;
+        transition: all .2s;
+
+        &_rotate {
+            transform: rotate(180deg);
+        }
+    }
+
+    .content {
+        padding: $mnormal $mnormal $vmiddle $vminmiddle;
+        overflow: hidden;
+        visibility: hidden;
+        transition: all .2s ease-in;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        &_open {
+            visibility: visible;
+            padding-top: $mnormal;
+            padding-bottom: $vmiddle;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@use '../../../../scss/vars' as *;
+@use '../../../../scss/extends' as *;
+
+.cart_sec {
+    padding-bottom: 43px;
+
+    @media (max-width: 320px) {
+        padding-bottom: 29px;
+    }
+
+    .price_count {
+        text-align: center;
+        margin: $b-low 0 34px 0;
+
+        @media (max-width: 992px) {
+            margin: $micro 0 $vmiddle 0;
+        }
+
+        @media (max-width: 520px) {
+            margin: $three 0 $over-mini 0;
+            font-size: $mini;
+        }
+
+        @media (max-width: 320px) {
+            font-size: $over-mini;
+        }
+    }
+
+    .two_sec_blocks {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(100px, 670px) minmax(100px, 473px));
+        column-gap: $big;
+
+        @media (max-width: 992px) {
+            gap: $min;
+        }
+
+        @media (max-width: 930px) {
+            display: block;
+        }
+    }
+}

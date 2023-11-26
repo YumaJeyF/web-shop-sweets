@@ -1,0 +1,31 @@
+@use '../../../../../../../../scss/vars' as *;
+
+.load {
+    padding: $vminmiddle $over $over-mini $over;
+    border-bottom: 1px solid $border-card;
+
+    .inp {
+        display: none;
+    }
+
+    .icon {
+        display: flex;
+        margin: auto;
+        margin-bottom: $low;
+        width: 72px;
+        height: 72px;
+    }
+
+    .text {
+        text-align: center;
+        margin-bottom: $tr;
+    }
+
+    .btn {
+        color: $blue;
+        padding: $over-mini;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+    }
+}

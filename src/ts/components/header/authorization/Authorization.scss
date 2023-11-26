@@ -1,0 +1,55 @@
+@use '../../../../scss/vars' as *;
+@use '../../../../scss/extends' as *;
+
+.form_m {
+    background-color: $header-back;
+    @extend %card-border;
+    padding: 50px $oh;
+    margin: $so;
+    position: relative;
+    margin-block: auto;
+
+    @media (max-width: 400px) {
+        margin: $big;
+        margin-block: auto;
+    }
+
+    @media (max-width: 350px) {
+        margin: $min; 
+        margin-block: auto;
+    }
+}
+
+.btn_close_m {
+    right: -$big;
+
+    @media (max-width: 400px) {
+        right: -$vmiddle;
+    }
+
+    @media (max-width: 350px) {
+        top: $micro;
+        right: $micro;
+    }
+}
+
+.btn_m {
+    @media (max-width: 400px) {
+        max-height: $so;
+    }
+
+    .loading_m {
+        width: 70px;
+
+        @media (max-width: 400px) {
+            width: 60px;
+        }
+    }
+}
+
+.btn_path_m {
+    @media (max-width: 350px) {
+        fill: $gr;
+        opacity: 0.4;
+    }
+}

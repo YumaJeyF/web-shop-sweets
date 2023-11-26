@@ -1,0 +1,87 @@
+@use '../../../../../scss/vars' as *;
+
+.sec {
+    margin-top: 95px;
+    background: no-repeat local center center;
+    background-size: cover;
+
+    @media (max-width: 400px) {
+        margin-top: 45px;
+    }
+
+    .content {
+        display: flex;
+        justify-content: end;
+        max-width: 1170px;
+        padding: $oh $mnormal 90px $mnormal;
+        margin: auto;
+
+        @media (max-width: 880px) {
+            padding-top: 70px;
+            padding-bottom: 60px;
+        }
+        
+        @media (max-width: 660px) {
+           justify-content: center; 
+        }
+
+        @media (max-width: 400px) {
+            padding-top: 49px;
+            padding-bottom: $min;
+        }
+
+        .form {
+            max-width: 570px;
+
+            @media (max-width: 1100px) {
+                max-width: 500px;
+            }
+
+            @media (max-width: 880px) {
+                max-width: 460px;
+            }
+
+            @media (max-width: 768px) {
+                max-width: 395px;
+            }
+
+            @media (max-width: 660px) {
+                max-width: 520px;
+            }
+
+
+            .title {
+                margin-bottom: $tr;
+            }
+    
+            .text {
+                margin-bottom: 34px;
+
+                @media (max-width: 768px) {
+                    font-size: $mnormal;
+                }
+
+                @media (max-width: 660px) {
+                    text-align: center;
+                }
+
+                @media (max-width: 400px) {
+                    font-size: $mini;
+                    margin-bottom: $over;
+                }
+            }
+    
+            .btn {
+                margin: $over 0 $mnormal 0;
+
+                @media (max-width: 660px) {
+                    margin: $middle auto $mnormal auto;
+                }
+
+                @media (max-width: 400px) {
+                    margin-bottom: 164px;
+                }
+            }
+        }
+    }
+}

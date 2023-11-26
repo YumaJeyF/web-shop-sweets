@@ -1,0 +1,23 @@
+@use '../../../../scss/styles' as *;
+@use '../../../../scss/vars' as *;
+
+.sec {
+    margin-top: 86px;
+
+    @media (max-width: 768px) {
+        margin-top: $so;
+    }
+
+    @media (max-width: 400px) {
+        margin-top: $th-tw;
+    }
+    
+    .pic {
+        max-width: 133px;
+        max-height: 93px;
+
+        .image {
+            width: 100%;
+        }
+    }
+}

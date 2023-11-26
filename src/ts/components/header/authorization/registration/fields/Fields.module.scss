@@ -1,0 +1,23 @@
+@use '../../../../../../scss/vars' as *;
+
+.fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax($oh, $card));
+    column-gap: $big;
+    row-gap: $min;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+        gap: $min;
+    }
+
+    @media (max-width: 600px) {
+        display: block;
+    }
+
+    .block {
+        &:not(:last-child) {
+            margin-bottom: $min;
+        }
+    }
+}

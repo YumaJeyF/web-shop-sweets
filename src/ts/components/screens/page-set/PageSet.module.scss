@@ -1,0 +1,50 @@
+@use '../../../../scss/styles' as *;
+@use '../../../../scss/vars' as *;
+@use '../../../../scss/extends' as *;
+
+.main_inf_product {
+    display: grid;
+    grid-template-columns:  repeat(2, minmax($oh, 570px));
+    align-items: start;
+    gap: $big;
+    margin: 36px 0;
+
+    @media (max-width: 830px) {
+        margin: $vmiddle 0;
+        gap: $vmiddle;
+    }
+
+    @media (max-width: 690px) {
+        grid-template-columns:  repeat(1, minmax($oh, 570px));
+        justify-content: center;
+    }
+
+    @media (max-width: 400px) {
+        row-gap: $mini;
+        margin-top: 0;
+    }
+}
+
+.inf_top {
+    @media (max-width: 690px) {
+        display: grid;
+    }
+
+    .title_text {
+        @media (max-width: 690px) {
+            grid-row: 1;
+        }
+        .title_inf {
+            text-align: left;
+            margin-bottom: $ver-mini;
+        }
+    
+        .text {
+            margin-bottom: $over-middle;
+            
+            @media (max-width: 830px) {
+                font-size: $min;
+            }
+        }
+    }
+}

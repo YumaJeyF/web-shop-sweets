@@ -1,0 +1,13 @@
+@use '../../../../../../scss/vars' as *;
+
+.fields {
+    .block {
+        &:not(:last-child) {
+            margin-bottom: $min;
+
+            @media (max-width: 400px) {
+                margin-bottom: $ten;
+            }
+        }
+    }
+}

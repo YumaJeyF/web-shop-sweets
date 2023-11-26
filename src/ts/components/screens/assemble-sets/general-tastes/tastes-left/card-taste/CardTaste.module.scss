@@ -1,0 +1,46 @@
+@use '../../../../../../../scss/vars' as *;
+@use '../../../../../../../scss/extends' as *;
+
+.card {
+    background-color: $wh;
+    @extend %card-border;
+    display: grid;
+
+    &_main {
+        margin: $tw-s $mnormal $vmiddle $mnormal;
+
+        @media (max-width: 520px) {
+            margin: $mini $over-mini $over-mini $over-mini;
+        }
+    }
+    
+    .pic {
+        width: 180px;
+        height: 170px;
+        margin: auto;
+    }
+
+    &_middle {
+        margin-top: $vmiddle;
+
+        .name {
+            margin-bottom: $over-mini;
+
+            @media (max-width: 520px) {
+                margin-bottom: $six;
+            }
+        }
+    }
+
+    &_bottom {
+        width: 100%;
+        padding: $ver-mini $mini $vmiddle $mini;
+        border-top: 1px solid $border-card;
+
+        @media (max-width: 520px) {
+            border: 0;
+            padding: $over-mini;
+            padding-top: 0;
+        }
+    }
+}

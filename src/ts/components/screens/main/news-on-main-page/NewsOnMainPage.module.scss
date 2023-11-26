@@ -1,0 +1,40 @@
+@use '../../../../../scss/styles' as *;
+@use '../../../../../scss/vars' as *;
+
+.news_sec {
+
+    .title_news {
+        margin: 85px 0 40px 0;
+
+        @media (max-width: 470px) {
+            margin: 50px 0 $vmiddle 0;
+        }
+    }
+
+    .btn {
+        margin-top: 3px;
+
+        @media (max-width: 539px) {
+            margin-top: $vmiddle;
+        }
+
+        @media (max-width: 470px) {
+            margin-top: $over;
+        }
+    }
+    
+    .not_data {
+        text-align: center;
+        font-size: $mnormal;
+
+        @media (max-width: 320px) {
+            font-size: $mini;
+        }
+    }
+}
+
+.swiper_news {
+    @media (max-width: 539px) {
+        max-width: $card;
+    }
+}

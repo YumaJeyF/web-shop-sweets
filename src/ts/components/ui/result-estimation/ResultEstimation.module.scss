@@ -1,0 +1,40 @@
+@use '../../../../scss/vars' as *;
+@use '../../../../scss/extends' as *;
+
+.sec {
+    .text {
+        text-align: center;
+        margin-bottom: $tw-three;
+
+        @media (max-width: 400px) {
+            font-size: $mini;
+        }
+    }
+
+    .pic {
+        max-width: 201px;
+        max-height: 164px;
+        margin: auto;
+
+        .image {
+            @extend %max;
+        }
+    }
+
+    .btn {
+        margin: 31px auto 75px auto;
+        width: 220px;
+        max-height: $fifty;
+        color: $red;
+        border: 1px solid $red;
+
+        @media (max-width: 470px) {
+            margin-bottom: $so;
+        }
+
+        @media (max-width: 400px) {
+            width: 180px;
+            max-height: $so;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@use '../../../../../../scss/vars' as *; 
+@use '../../../../../../scss/extends' as *; 
+
+.card {
+    @extend %card-border;
+    background-color: $wh;
+    max-width: $w-card;
+    display: grid;
+
+    .pic {
+        background-color: $wh;
+        padding: $over-middle $mini 28px $mini;
+
+        @media (max-width: 470px) {
+            padding: $b-low $low $over-mini $low;
+        }
+    }
+
+    .block_inf {
+        padding: 0 $mini $mini $mini;
+
+        @media (max-width: 470px) {
+            padding: 0 $low $low $low;
+        }
+
+        .name {
+            margin-bottom: $ten;
+
+            @media (max-width: 470px) {
+                margin-bottom: $seven;
+            }
+        }
+    }
+
+    .price {
+        margin-top: auto;
+        padding: $mini $tr $mini $ver-mini;
+        border-top: 1px solid $border-card;
+         
+        @media (max-width: 470px) {
+            padding: $low;
+            padding-bottom: $ver-mini;
+        }
+    }
+}

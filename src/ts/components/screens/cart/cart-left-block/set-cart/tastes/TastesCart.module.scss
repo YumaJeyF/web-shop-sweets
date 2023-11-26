@@ -1,0 +1,10 @@
+@use '../../../../../../../scss/styles' as *;
+@use '../../../../../../../scss/vars' as *;
+
+.tastes {
+    margin-bottom: $ver-mini;
+    
+    .text {
+        margin-bottom: 1px;
+    }
+}

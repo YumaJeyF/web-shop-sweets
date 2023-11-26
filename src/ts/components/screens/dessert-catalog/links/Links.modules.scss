@@ -1,0 +1,41 @@
+@use '../../../../../scss/vars' as *;
+@use '../../../../../scss/styles' as *;
+
+.sec {
+    display: grid;
+    grid-template-columns: repeat(3, minmax($oh, 369px));
+    grid-template-rows: minmax($oh, 385px) minmax($oh, 341px);
+    column-gap: $big;
+    row-gap: $b-big;
+    margin-top: 46px;
+
+    @media (max-width: 930px) {
+        column-gap: $min;
+        row-gap: $normal;
+        grid-template-rows: minmax($oh, 385px) minmax($oh, 300px);
+    }
+
+    @media (max-width: 768px) {
+        margin-top: $vmiddle;
+    }
+
+    @media (max-width: 778px) {
+        grid-template-rows: minmax($oh, 260px) minmax($oh, 220px);
+    }
+
+    @media (max-width: 576px) {
+        grid-template-rows: minmax($oh, 225px) minmax($oh, 200px);
+        column-gap: $ten;
+        row-gap: $low;
+    
+    }
+
+    @media (max-width: 470px) {
+        grid-template-rows: minmax($oh, 225px) minmax($oh, 200px) minmax(50px, $oh);
+        grid-template-columns: repeat(2, minmax($oh, 369px));
+    }
+
+    @media (max-width: 400px) {
+        margin-top: $over-mini;
+    }
+}

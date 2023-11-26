@@ -1,0 +1,72 @@
+@use '../../../../../scss/styles' as *;
+@use '../../../../../scss/vars' as *;
+@use '../../../../../scss/mixins' as *;
+
+.sec {
+
+    .title {
+        margin: 115px 0 $so 0;
+
+        @media (max-width: 768px) {
+            margin: 70px 0 $big;
+        }
+
+        @media (max-width: 400px) {
+            margin: $v-big 0 $b-over 0;
+        }
+    }
+
+    .catalog {
+        display: grid;
+        grid-template-columns: repeat(4, minmax($oh, $w-card));
+        grid-template-rows: repeat(1, minmax($oh, 413px));
+        gap: $big;
+
+        @media (max-width: 992px) {
+            gap: $vmiddle;
+            grid-template-rows: repeat(1, minmax($oh, ));
+        }
+
+        @media (max-width: 950px) {
+            grid-template-rows: repeat(1, minmax($oh, 400px));
+        }
+
+        @media (max-width: 910px) {
+            gap: $ten;
+        }
+         
+        @media (max-width: 840px) {
+            grid-template-columns: repeat(2, minmax($oh, $w-card));
+            grid-template-rows: repeat(2, minmax($oh, 413px));
+            justify-content: center;
+        }
+
+        @media (max-width: 470px) {
+            gap: $low;
+            grid-template-rows: repeat(2, minmax($oh, $card));
+        }
+
+        @media (max-width: 430px) {
+            grid-template-rows: repeat(2, minmax($oh, 350px));
+        }
+
+        @media (max-width: 370px) {
+            grid-template-columns: repeat(1, minmax($oh, 250px));
+        }
+    }
+
+    .btn {
+        @include btn-secondary($normal 80px);
+        margin: 33px auto 0 auto;
+
+        @media (max-width: 768px) {
+            padding: $mini $so;
+        }
+
+        @media (max-width: 470px) {
+            font-size: $over-mini;
+            padding: $ten $min;
+            margin-top: $middle;
+        }
+    }
+}
